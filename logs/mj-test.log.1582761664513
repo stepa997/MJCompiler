@@ -1,0 +1,74 @@
+INFO  00:00:18,926 - Compiling source file: C:\Users\Djole\Desktop\PP_projekat\workspace\MJCompiler\test\program.mj
+INFO  00:00:18,973 - #6 program
+INFO  00:00:18,973 - #3 MJProgram
+INFO  00:00:18,974 - #3 int
+INFO  00:00:18,974 - #3 x
+INFO  00:00:18,975 - #9 ;
+INFO  00:00:18,976 - #3 int
+INFO  00:00:18,977 - #3 y
+INFO  00:00:18,977 - #9 ;
+INFO  00:00:18,977 - #7 {
+INFO  00:00:18,977 - #15 void
+INFO  00:00:18,978 - #3 main
+INFO  00:00:18,979 - #16 (
+INFO  00:00:18,979 - #17 )
+INFO  00:00:18,980 - #7 {
+INFO  00:00:18,981 - #8 }
+INFO  00:00:18,982 - #8 }
+INFO  00:00:18,984 - Program(
+ MJProgram
+  GlobalDeclList_NoEps(
+    GlobalDeclList_NoEps(
+      GlobalDeclList_Eps(
+      ) [GlobalDeclList_Eps]
+      GlobalDecl_Var(
+        GlobalVarDecl(
+          Type(
+           int
+          ) [Type]
+          GlobalVarDeclDefineList_Item(
+            GlobalVarDeclDefine(
+              VarDeclDefine_Single(
+               x
+              ) [VarDeclDefine_Single]
+            ) [GlobalVarDeclDefine]
+          ) [GlobalVarDeclDefineList_Item]
+        ) [GlobalVarDecl]
+      ) [GlobalDecl_Var]
+    ) [GlobalDeclList_NoEps]
+    GlobalDecl_Var(
+      GlobalVarDecl(
+        Type(
+         int
+        ) [Type]
+        GlobalVarDeclDefineList_Item(
+          GlobalVarDeclDefine(
+            VarDeclDefine_Single(
+             y
+            ) [VarDeclDefine_Single]
+          ) [GlobalVarDeclDefine]
+        ) [GlobalVarDeclDefineList_Item]
+      ) [GlobalVarDecl]
+    ) [GlobalDecl_Var]
+  ) [GlobalDeclList_NoEps]
+  MethodDeclList_NoEps(
+    MethodDeclList_Eps(
+    ) [MethodDeclList_Eps]
+    MethodDecl(
+      VoidType_Void(
+      ) [VoidType_Void]
+     main
+      MethodSignatureDerived1(
+        OptFormPars_Eps(
+        ) [OptFormPars_Eps]
+      ) [MethodSignatureDerived1]
+      VarDeclList_Eps(
+      ) [VarDeclList_Eps]
+      StatmentList_Eps(
+      ) [StatmentList_Eps]
+    ) [MethodDecl]
+  ) [MethodDeclList_NoEps]
+) [Program]
+INFO  00:00:18,985 - ===================================
+INFO  00:00:18,988 -  Print count calls = 0
+INFO  00:00:18,988 -  Deklarisanih promenljivih ima = 2

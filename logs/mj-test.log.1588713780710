@@ -1,0 +1,138 @@
+INFO  23:21:43,855 - Compiling source file: C:\Users\Djole\Desktop\PP_projekat\workspace\MJCompiler\test\program.mj
+INFO  23:21:43,905 - #6 program
+INFO  23:21:43,905 - #3 MJProgram
+INFO  23:21:43,906 - #3 int
+INFO  23:21:43,907 - #3 x
+INFO  23:21:43,908 - #9 ;
+INFO  23:21:43,910 - #3 int
+INFO  23:21:43,911 - #3 y
+INFO  23:21:43,911 - #9 ;
+INFO  23:21:43,911 - #7 {
+INFO  23:21:43,911 - #15 void
+INFO  23:21:43,913 - #3 main
+INFO  23:21:43,913 - #16 (
+INFO  23:21:43,913 - #17 )
+INFO  23:21:43,914 - #7 {
+INFO  23:21:43,915 - #3 x
+INFO  23:21:43,916 - #10 =
+INFO  23:21:43,917 - #2 5
+INFO  23:21:43,917 - #31 +
+INFO  23:21:43,917 - #3 y
+INFO  23:21:43,919 - #31 +
+INFO  23:21:43,919 - #2 3
+INFO  23:21:43,920 - #9 ;
+INFO  23:21:43,920 - #24 print
+INFO  23:21:43,921 - #16 (
+INFO  23:21:43,921 - #2 1
+INFO  23:21:43,921 - #17 )
+INFO  23:21:43,921 - #9 ;
+INFO  23:21:43,921 - #8 }
+INFO  23:21:43,921 - #8 }
+INFO  23:21:43,934 - Program(
+  ProgName(
+   MJProgram
+  ) [ProgName]
+  GlobalDeclList_NoEps(
+    GlobalDeclList_NoEps(
+      GlobalDeclList_Eps(
+      ) [GlobalDeclList_Eps]
+      GlobalDecl_Var(
+        GlobalVarDecl(
+          Type(
+           int
+          ) [Type]
+          GlobalVarDeclDefineList_Item(
+            GlobalVarDeclDefine(
+              VarDeclDefine_Single(
+               x
+              ) [VarDeclDefine_Single]
+            ) [GlobalVarDeclDefine]
+          ) [GlobalVarDeclDefineList_Item]
+        ) [GlobalVarDecl]
+      ) [GlobalDecl_Var]
+    ) [GlobalDeclList_NoEps]
+    GlobalDecl_Var(
+      GlobalVarDecl(
+        Type(
+         int
+        ) [Type]
+        GlobalVarDeclDefineList_Item(
+          GlobalVarDeclDefine(
+            VarDeclDefine_Single(
+             y
+            ) [VarDeclDefine_Single]
+          ) [GlobalVarDeclDefine]
+        ) [GlobalVarDeclDefineList_Item]
+      ) [GlobalVarDecl]
+    ) [GlobalDecl_Var]
+  ) [GlobalDeclList_NoEps]
+  MethodDeclList_NoEps(
+    MethodDeclList_Eps(
+    ) [MethodDeclList_Eps]
+    MethodDecl(
+      VoidType_Void(
+       main
+      ) [VoidType_Void]
+      MethodSignatureDerived1(
+        OptFormPars_Eps(
+        ) [OptFormPars_Eps]
+      ) [MethodSignatureDerived1]
+      VarDeclList_Eps(
+      ) [VarDeclList_Eps]
+      StatementList_NoEps(
+        StatementList_NoEps(
+          StatmentList_Eps(
+          ) [StatmentList_Eps]
+          StatementDesignator_Single(
+            DesignatorStatement_Expr(
+              DesignatorIdent(
+               x
+              ) [DesignatorIdent]
+              ExprList(
+                ExprList(
+                  ExprTerm(
+                    TermOne(
+                      FactorNum(
+                       5
+                      ) [FactorNum]
+                    ) [TermOne]
+                  ) [ExprTerm]
+                  Addop_add(
+                  ) [Addop_add]
+                  TermOne(
+                    FactorDesignator(
+                      DesignatorIdent(
+                       y
+                      ) [DesignatorIdent]
+                    ) [FactorDesignator]
+                  ) [TermOne]
+                ) [ExprList]
+                Addop_add(
+                ) [Addop_add]
+                TermOne(
+                  FactorNum(
+                   3
+                  ) [FactorNum]
+                ) [TermOne]
+              ) [ExprList]
+            ) [DesignatorStatement_Expr]
+          ) [StatementDesignator_Single]
+        ) [StatementList_NoEps]
+        Statement_print(
+          ExprTerm(
+            TermOne(
+              FactorNum(
+               1
+              ) [FactorNum]
+            ) [TermOne]
+          ) [ExprTerm]
+        ) [Statement_print]
+      ) [StatementList_NoEps]
+    ) [MethodDecl]
+  ) [MethodDeclList_NoEps]
+) [Program]
+INFO  23:21:43,934 - ===================================
+ERROR 23:21:43,937 - Greska na liniji 7 :  nekompatibilni tipovi u dodeli vrednosti null
+INFO  23:21:43,938 -  Print count calls = 1
+INFO  23:21:43,938 -  Deklarisanih promenljivih ima = 0
+INFO  23:21:43,938 - ====================================

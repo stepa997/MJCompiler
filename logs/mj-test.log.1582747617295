@@ -1,0 +1,63 @@
+INFO  15:21:59,514 - Compiling source file: C:\Users\Djole\Desktop\PP_projekat\workspace\MJCompiler\test\program.mj
+INFO  15:21:59,565 - #6 program
+INFO  15:21:59,565 - #3 MJProgram
+INFO  15:21:59,565 - #3 int
+INFO  15:21:59,566 - #3 x
+INFO  15:21:59,567 - #18 ,
+INFO  15:21:59,569 - #3 y
+INFO  15:21:59,569 - #9 ;
+INFO  15:21:59,569 - #7 {
+INFO  15:21:59,571 - #15 void
+INFO  15:21:59,572 - #3 main
+INFO  15:21:59,573 - #16 (
+INFO  15:21:59,573 - #17 )
+INFO  15:21:59,574 - #7 {
+INFO  15:21:59,575 - #8 }
+INFO  15:21:59,575 - #8 }
+INFO  15:21:59,579 - Program(
+ MJProgram
+  GlobalDeclList_NoEps(
+    GlobalDeclList_Eps(
+    ) [GlobalDeclList_Eps]
+    GlobalDecl_Var(
+      GlobalVarDecl(
+        Type(
+         int
+        ) [Type]
+        GlobalVarDeclDefineList_List(
+          GlobalVarDeclDefineList_Item(
+            GlobalVarDeclDefine(
+              VarDeclDefine_Single(
+               x
+              ) [VarDeclDefine_Single]
+            ) [GlobalVarDeclDefine]
+          ) [GlobalVarDeclDefineList_Item]
+          GlobalVarDeclDefine(
+            VarDeclDefine_Single(
+             y
+            ) [VarDeclDefine_Single]
+          ) [GlobalVarDeclDefine]
+        ) [GlobalVarDeclDefineList_List]
+      ) [GlobalVarDecl]
+    ) [GlobalDecl_Var]
+  ) [GlobalDeclList_NoEps]
+  MethodDeclList_NoEps(
+    MethodDeclList_Eps(
+    ) [MethodDeclList_Eps]
+    MethodDecl(
+      VoidType_Void(
+      ) [VoidType_Void]
+     main
+      MethodSignatureDerived1(
+        OptFormPars_Eps(
+        ) [OptFormPars_Eps]
+      ) [MethodSignatureDerived1]
+      VarDeclList_Eps(
+      ) [VarDeclList_Eps]
+      StatmentList_Eps(
+      ) [StatmentList_Eps]
+    ) [MethodDecl]
+  ) [MethodDeclList_NoEps]
+) [Program]
+INFO  15:21:59,579 - ===================================
+INFO  15:21:59,582 -  Print count calls = 0

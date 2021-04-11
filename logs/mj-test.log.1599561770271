@@ -1,0 +1,21 @@
+INFO  12:42:20,096 - Compiling source file: C:\Users\Djole\Desktop\PP_projekat\workspace\MJCompiler\test\program.mj
+INFO  12:42:20,169 - #6 program
+INFO  12:42:20,169 - #3 test301
+INFO  12:42:20,169 - #3 char
+INFO  12:42:20,172 - #3 nizch
+INFO  12:42:20,173 - #11 [
+INFO  12:42:20,174 - #14 ]
+INFO  12:42:20,174 - #9 ;
+INFO  12:42:20,175 - #7 {
+INFO  12:42:20,176 - #15 void
+INFO  12:42:20,177 - #3 main
+INFO  12:42:20,177 - #16 (
+INFO  12:42:20,178 - #17 )
+INFO  12:42:20,178 - #3 boolean
+INFO  12:42:20,179 - #3 i
+INFO  12:42:20,180 - #9 ;
+INFO  12:42:20,180 - #7 {
+INFO  12:42:20,181 - #3 i
+INFO  12:42:20,182 - #10 =
+INFO  12:42:20,182 - #5 true
+INFO  12:42:20,183 - #9 ;

@@ -1,0 +1,252 @@
+INFO  14:48:01,413 - Compiling source file: C:\Users\Djole\Desktop\PP_projekat\workspace\MJCompiler\test\program.mj
+INFO  14:48:01,495 - #6 program
+INFO  14:48:01,495 - #3 test301
+INFO  14:48:01,495 - #29 const
+INFO  14:48:01,497 - #3 int
+INFO  14:48:01,498 - #3 nula
+INFO  14:48:01,499 - #10 =
+INFO  14:48:01,499 - #2 0
+INFO  14:48:01,499 - #9 ;
+INFO  14:48:01,501 - #29 const
+INFO  14:48:01,502 - #3 int
+INFO  14:48:01,503 - #3 jedan
+INFO  14:48:01,503 - #10 =
+INFO  14:48:01,503 - #2 1
+INFO  14:48:01,503 - #9 ;
+INFO  14:48:01,503 - #29 const
+INFO  14:48:01,503 - #3 int
+INFO  14:48:01,503 - #3 pet
+INFO  14:48:01,503 - #10 =
+INFO  14:48:01,503 - #2 5
+INFO  14:48:01,503 - #9 ;
+INFO  14:48:01,504 - #3 int
+INFO  14:48:01,504 - #3 niz
+INFO  14:48:01,504 - #11 [
+INFO  14:48:01,504 - #14 ]
+INFO  14:48:01,504 - #9 ;
+INFO  14:48:01,506 - #3 char
+INFO  14:48:01,507 - #3 nizch
+INFO  14:48:01,507 - #11 [
+INFO  14:48:01,508 - #14 ]
+INFO  14:48:01,508 - #9 ;
+INFO  14:48:01,508 - #7 {
+INFO  14:48:01,508 - #15 void
+INFO  14:48:01,509 - #3 main
+INFO  14:48:01,509 - #16 (
+INFO  14:48:01,509 - #17 )
+INFO  14:48:01,510 - #3 int
+INFO  14:48:01,511 - #3 bodovi
+INFO  14:48:01,511 - #9 ;
+INFO  14:48:01,512 - #7 {
+INFO  14:48:01,513 - #3 bodovi
+INFO  14:48:01,514 - #10 =
+INFO  14:48:01,514 - #2 0
+INFO  14:48:01,515 - #9 ;
+INFO  14:48:01,516 - #3 bodovi
+INFO  14:48:01,516 - #26 ++
+INFO  14:48:01,517 - #9 ;
+INFO  14:48:01,517 - #3 bodovi
+INFO  14:48:01,517 - #37 -=
+INFO  14:48:01,517 - #2 2
+INFO  14:48:01,519 - #9 ;
+INFO  14:48:01,519 - #24 print
+INFO  14:48:01,519 - #16 (
+INFO  14:48:01,520 - #3 bodovi
+INFO  14:48:01,520 - #17 )
+INFO  14:48:01,520 - #9 ;
+INFO  14:48:01,520 - #8 }
+INFO  14:48:01,520 - #8 }
+INFO  14:48:01,531 - Program(
+  ProgName(
+   test301
+  ) [ProgName]
+  GlobalDeclList_NoEps(
+    GlobalDeclList_NoEps(
+      GlobalDeclList_NoEps(
+        GlobalDeclList_NoEps(
+          GlobalDeclList_NoEps(
+            GlobalDeclList_Eps(
+            ) [GlobalDeclList_Eps]
+            GlobalDecl_Const(
+              ConstDecl(
+                Type(
+                 int
+                ) [Type]
+                ConstValList_Item(
+                  ConstValAssign(
+                   nula
+                    ConstVal_Num(
+                     0
+                    ) [ConstVal_Num]
+                  ) [ConstValAssign]
+                ) [ConstValList_Item]
+              ) [ConstDecl]
+            ) [GlobalDecl_Const]
+          ) [GlobalDeclList_NoEps]
+          GlobalDecl_Const(
+            ConstDecl(
+              Type(
+               int
+              ) [Type]
+              ConstValList_Item(
+                ConstValAssign(
+                 jedan
+                  ConstVal_Num(
+                   1
+                  ) [ConstVal_Num]
+                ) [ConstValAssign]
+              ) [ConstValList_Item]
+            ) [ConstDecl]
+          ) [GlobalDecl_Const]
+        ) [GlobalDeclList_NoEps]
+        GlobalDecl_Const(
+          ConstDecl(
+            Type(
+             int
+            ) [Type]
+            ConstValList_Item(
+              ConstValAssign(
+               pet
+                ConstVal_Num(
+                 5
+                ) [ConstVal_Num]
+              ) [ConstValAssign]
+            ) [ConstValList_Item]
+          ) [ConstDecl]
+        ) [GlobalDecl_Const]
+      ) [GlobalDeclList_NoEps]
+      GlobalDecl_Var(
+        GlobalVarDecl(
+          Type(
+           int
+          ) [Type]
+          GlobalVarDeclDefineList_Item(
+            GlobalVarDeclDefine(
+              VarDeclDefine_Array(
+               niz
+              ) [VarDeclDefine_Array]
+            ) [GlobalVarDeclDefine]
+          ) [GlobalVarDeclDefineList_Item]
+        ) [GlobalVarDecl]
+      ) [GlobalDecl_Var]
+    ) [GlobalDeclList_NoEps]
+    GlobalDecl_Var(
+      GlobalVarDecl(
+        Type(
+         char
+        ) [Type]
+        GlobalVarDeclDefineList_Item(
+          GlobalVarDeclDefine(
+            VarDeclDefine_Array(
+             nizch
+            ) [VarDeclDefine_Array]
+          ) [GlobalVarDeclDefine]
+        ) [GlobalVarDeclDefineList_Item]
+      ) [GlobalVarDecl]
+    ) [GlobalDecl_Var]
+  ) [GlobalDeclList_NoEps]
+  MethodDeclList_NoEps(
+    MethodDeclList_Eps(
+    ) [MethodDeclList_Eps]
+    MethodDecl(
+      VoidType_Void(
+       main
+      ) [VoidType_Void]
+      MethodSignatureDerived1(
+        OptFormPars_Eps(
+        ) [OptFormPars_Eps]
+      ) [MethodSignatureDerived1]
+      VarDeclList_NoEps(
+        VarDeclList_Eps(
+        ) [VarDeclList_Eps]
+        VarDecl(
+          Type(
+           int
+          ) [Type]
+          VarDeclDefine_Item(
+            VarDeclDefine_Single(
+             bodovi
+            ) [VarDeclDefine_Single]
+          ) [VarDeclDefine_Item]
+        ) [VarDecl]
+      ) [VarDeclList_NoEps]
+      StatementList_NoEps(
+        StatementList_NoEps(
+          StatementList_NoEps(
+            StatementList_NoEps(
+              StatmentList_Eps(
+              ) [StatmentList_Eps]
+              StatementDesignator_Single(
+                DesignatorStatement_Expr(
+                  DesignatorIdent(
+                   bodovi
+                  ) [DesignatorIdent]
+                  Assignop_equal(
+                  ) [Assignop_equal]
+                  LeftExpr(
+                    ExprTerm(
+                      TermLeft_term(
+                        TermOne(
+                          FactorNum(
+                           0
+                          ) [FactorNum]
+                        ) [TermOne]
+                      ) [TermLeft_term]
+                    ) [ExprTerm]
+                  ) [LeftExpr]
+                ) [DesignatorStatement_Expr]
+              ) [StatementDesignator_Single]
+            ) [StatementList_NoEps]
+            StatementDesignator_Single(
+              DesignatorStatement_Plus(
+                DesignatorIdent(
+                 bodovi
+                ) [DesignatorIdent]
+              ) [DesignatorStatement_Plus]
+            ) [StatementDesignator_Single]
+          ) [StatementList_NoEps]
+          StatementDesignator_Single(
+            DesignatorStatement_Expr(
+              DesignatorIdent(
+               bodovi
+              ) [DesignatorIdent]
+              Ass_Addop_Right(
+                AddopRight_sub(
+                ) [AddopRight_sub]
+              ) [Ass_Addop_Right]
+              LeftExpr(
+                ExprTerm(
+                  TermLeft_term(
+                    TermOne(
+                      FactorNum(
+                       2
+                      ) [FactorNum]
+                    ) [TermOne]
+                  ) [TermLeft_term]
+                ) [ExprTerm]
+              ) [LeftExpr]
+            ) [DesignatorStatement_Expr]
+          ) [StatementDesignator_Single]
+        ) [StatementList_NoEps]
+        Statement_print(
+          ExprTerm(
+            TermLeft_term(
+              TermOne(
+                FactorDesignator(
+                  DesignatorIdent(
+                   bodovi
+                  ) [DesignatorIdent]
+                ) [FactorDesignator]
+              ) [TermOne]
+            ) [TermLeft_term]
+          ) [ExprTerm]
+        ) [Statement_print]
+      ) [StatementList_NoEps]
+    ) [MethodDecl]
+  ) [MethodDeclList_NoEps]
+) [Program]
+INFO  14:48:01,532 - ===================================
+ERROR 14:48:01,538 - Greska na liniji 21 :  los tip varijable 
+INFO  14:48:01,538 -  Print count calls = 1
+INFO  14:48:01,538 -  Deklarisanih promenljivih ima = 0
+INFO  14:48:01,539 - ====================================

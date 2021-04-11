@@ -1,0 +1,123 @@
+INFO  03:04:00,661 - Compiling source file: C:\Users\Djole\Desktop\PP_projekat\workspace\MJCompiler\test\program.mj
+INFO  03:04:00,717 - #6 program
+INFO  03:04:00,717 - #3 MJProgram
+INFO  03:04:00,717 - #3 int
+INFO  03:04:00,718 - #3 x
+INFO  03:04:00,719 - #9 ;
+INFO  03:04:00,720 - #3 int
+INFO  03:04:00,722 - #3 y
+INFO  03:04:00,722 - #9 ;
+INFO  03:04:00,722 - #7 {
+INFO  03:04:00,722 - #15 void
+INFO  03:04:00,724 - #3 main
+INFO  03:04:00,724 - #16 (
+INFO  03:04:00,724 - #17 )
+INFO  03:04:00,725 - #7 {
+INFO  03:04:00,726 - #3 x
+INFO  03:04:00,726 - #10 =
+INFO  03:04:00,727 - #2 5
+INFO  03:04:00,727 - #31 +
+INFO  03:04:00,727 - #3 y
+INFO  03:04:00,729 - #9 ;
+INFO  03:04:00,730 - #24 print
+INFO  03:04:00,730 - #16 (
+INFO  03:04:00,836 - #2 1
+INFO  03:04:00,836 - #17 )
+INFO  03:04:00,836 - #9 ;
+INFO  03:04:00,836 - #8 }
+INFO  03:04:00,837 - #8 }
+INFO  03:04:00,850 - Program(
+  ProgName(
+   MJProgram
+  ) [ProgName]
+  GlobalDeclList_NoEps(
+    GlobalDeclList_NoEps(
+      GlobalDeclList_Eps(
+      ) [GlobalDeclList_Eps]
+      GlobalDecl_Var(
+        GlobalVarDecl(
+          Type(
+           int
+          ) [Type]
+          GlobalVarDeclDefineList_Item(
+            GlobalVarDeclDefine(
+              VarDeclDefine_Single(
+               x
+              ) [VarDeclDefine_Single]
+            ) [GlobalVarDeclDefine]
+          ) [GlobalVarDeclDefineList_Item]
+        ) [GlobalVarDecl]
+      ) [GlobalDecl_Var]
+    ) [GlobalDeclList_NoEps]
+    GlobalDecl_Var(
+      GlobalVarDecl(
+        Type(
+         int
+        ) [Type]
+        GlobalVarDeclDefineList_Item(
+          GlobalVarDeclDefine(
+            VarDeclDefine_Single(
+             y
+            ) [VarDeclDefine_Single]
+          ) [GlobalVarDeclDefine]
+        ) [GlobalVarDeclDefineList_Item]
+      ) [GlobalVarDecl]
+    ) [GlobalDecl_Var]
+  ) [GlobalDeclList_NoEps]
+  MethodDeclList_NoEps(
+    MethodDeclList_Eps(
+    ) [MethodDeclList_Eps]
+    MethodDecl(
+      VoidType_Void(
+       main
+      ) [VoidType_Void]
+      MethodSignatureDerived1(
+        OptFormPars_Eps(
+        ) [OptFormPars_Eps]
+      ) [MethodSignatureDerived1]
+      VarDeclList_Eps(
+      ) [VarDeclList_Eps]
+      StatementList_NoEps(
+        StatementList_NoEps(
+          StatmentList_Eps(
+          ) [StatmentList_Eps]
+          StatementDesignator_Single(
+            DesignatorStatement_Expr(
+              DesignatorIdent(
+               x
+              ) [DesignatorIdent]
+              ExprList(
+                ExprTerm(
+                  TermOne(
+                    FactorNum(
+                     5
+                    ) [FactorNum]
+                  ) [TermOne]
+                ) [ExprTerm]
+                Addop_add(
+                ) [Addop_add]
+                TermOne(
+                  FactorDesignator(
+                    DesignatorIdent(
+                     y
+                    ) [DesignatorIdent]
+                  ) [FactorDesignator]
+                ) [TermOne]
+              ) [ExprList]
+            ) [DesignatorStatement_Expr]
+          ) [StatementDesignator_Single]
+        ) [StatementList_NoEps]
+        Statement_print(
+          ExprTerm(
+            TermOne(
+              FactorNum(
+               1
+              ) [FactorNum]
+            ) [TermOne]
+          ) [ExprTerm]
+        ) [Statement_print]
+      ) [StatementList_NoEps]
+    ) [MethodDecl]
+  ) [MethodDeclList_NoEps]
+) [Program]
+INFO  03:04:00,851 - ===================================

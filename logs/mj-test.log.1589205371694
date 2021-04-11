@@ -1,0 +1,95 @@
+INFO  15:55:09,764 - Compiling source file: C:\Users\Djole\Desktop\PP_projekat\workspace\MJCompiler\test\program.mj
+INFO  15:55:09,853 - #6 program
+INFO  15:55:09,853 - #3 test301
+INFO  15:55:09,853 - #3 int
+INFO  15:55:09,856 - #3 niz
+INFO  15:55:09,857 - #11 [
+INFO  15:55:09,857 - #14 ]
+INFO  15:55:09,858 - #9 ;
+INFO  15:55:09,859 - #7 {
+INFO  15:55:09,861 - #15 void
+INFO  15:55:09,863 - #3 main
+INFO  15:55:09,864 - #16 (
+INFO  15:55:09,864 - #17 )
+INFO  15:55:09,866 - #7 {
+INFO  15:55:09,867 - #3 niz
+INFO  15:55:09,868 - #10 =
+INFO  15:55:09,869 - #28 new
+INFO  15:55:09,870 - #3 int
+INFO  15:55:09,870 - #11 [
+INFO  15:55:09,870 - #2 3
+INFO  15:55:09,870 - #14 ]
+INFO  15:55:09,870 - #9 ;
+INFO  15:55:09,871 - #8 }
+INFO  15:55:09,872 - #8 }
+INFO  15:55:09,890 - Program(
+  ProgName(
+   test301
+  ) [ProgName]
+  GlobalDeclList_NoEps(
+    GlobalDeclList_Eps(
+    ) [GlobalDeclList_Eps]
+    GlobalDecl_Var(
+      GlobalVarDecl(
+        Type(
+         int
+        ) [Type]
+        GlobalVarDeclDefineList_Item(
+          GlobalVarDeclDefine(
+            VarDeclDefine_Array(
+             niz
+            ) [VarDeclDefine_Array]
+          ) [GlobalVarDeclDefine]
+        ) [GlobalVarDeclDefineList_Item]
+      ) [GlobalVarDecl]
+    ) [GlobalDecl_Var]
+  ) [GlobalDeclList_NoEps]
+  MethodDeclList_NoEps(
+    MethodDeclList_Eps(
+    ) [MethodDeclList_Eps]
+    MethodDecl(
+      VoidType_Void(
+       main
+      ) [VoidType_Void]
+      MethodSignatureDerived1(
+        OptFormPars_Eps(
+        ) [OptFormPars_Eps]
+      ) [MethodSignatureDerived1]
+      VarDeclList_Eps(
+      ) [VarDeclList_Eps]
+      StatementList_NoEps(
+        StatmentList_Eps(
+        ) [StatmentList_Eps]
+        StatementDesignator_Single(
+          DesignatorStatement_Expr(
+            DesignatorIdent(
+             niz
+            ) [DesignatorIdent]
+            Assignop_equal(
+            ) [Assignop_equal]
+            ExprTerm(
+              TermOne(
+                NewType1(
+                  Type(
+                   int
+                  ) [Type]
+                  ExprTerm(
+                    TermOne(
+                      FactorNum(
+                       3
+                      ) [FactorNum]
+                    ) [TermOne]
+                  ) [ExprTerm]
+                ) [NewType1]
+              ) [TermOne]
+            ) [ExprTerm]
+          ) [DesignatorStatement_Expr]
+        ) [StatementDesignator_Single]
+      ) [StatementList_NoEps]
+    ) [MethodDecl]
+  ) [MethodDeclList_NoEps]
+) [Program]
+INFO  15:55:09,890 - ===================================
+INFO  15:55:09,895 -  Print count calls = 0
+INFO  15:55:09,895 -  Deklarisanih promenljivih ima = 0
+INFO  15:55:09,895 - ====================================

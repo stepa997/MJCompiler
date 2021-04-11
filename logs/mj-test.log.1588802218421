@@ -1,0 +1,127 @@
+INFO  21:26:24,622 - Compiling source file: C:\Users\Djole\Desktop\PP_projekat\workspace\MJCompiler\test\program.mj
+INFO  21:26:24,669 - #6 program
+INFO  21:26:24,670 - #3 MJProgram
+INFO  21:26:24,670 - #3 int
+INFO  21:26:24,672 - #3 x
+INFO  21:26:24,673 - #9 ;
+INFO  21:26:24,674 - #3 int
+INFO  21:26:24,676 - #3 y
+INFO  21:26:24,676 - #9 ;
+INFO  21:26:24,676 - #7 {
+INFO  21:26:24,676 - #15 void
+INFO  21:26:24,678 - #3 main
+INFO  21:26:24,678 - #16 (
+INFO  21:26:24,678 - #17 )
+INFO  21:26:24,679 - #7 {
+INFO  21:26:24,680 - #3 x
+INFO  21:26:24,680 - #10 =
+INFO  21:26:24,681 - #2 5
+INFO  21:26:24,681 - #31 +
+INFO  21:26:24,681 - #3 y
+INFO  21:26:24,683 - #9 ;
+INFO  21:26:24,684 - #24 print
+INFO  21:26:24,684 - #16 (
+INFO  21:26:24,684 - #2 1
+INFO  21:26:24,685 - #17 )
+INFO  21:26:24,685 - #9 ;
+INFO  21:26:24,685 - #8 }
+INFO  21:26:24,685 - #8 }
+INFO  21:26:24,698 - Program(
+  ProgName(
+   MJProgram
+  ) [ProgName]
+  GlobalDeclList_NoEps(
+    GlobalDeclList_NoEps(
+      GlobalDeclList_Eps(
+      ) [GlobalDeclList_Eps]
+      GlobalDecl_Var(
+        GlobalVarDecl(
+          Type(
+           int
+          ) [Type]
+          GlobalVarDeclDefineList_Item(
+            GlobalVarDeclDefine(
+              VarDeclDefine_Single(
+               x
+              ) [VarDeclDefine_Single]
+            ) [GlobalVarDeclDefine]
+          ) [GlobalVarDeclDefineList_Item]
+        ) [GlobalVarDecl]
+      ) [GlobalDecl_Var]
+    ) [GlobalDeclList_NoEps]
+    GlobalDecl_Var(
+      GlobalVarDecl(
+        Type(
+         int
+        ) [Type]
+        GlobalVarDeclDefineList_Item(
+          GlobalVarDeclDefine(
+            VarDeclDefine_Single(
+             y
+            ) [VarDeclDefine_Single]
+          ) [GlobalVarDeclDefine]
+        ) [GlobalVarDeclDefineList_Item]
+      ) [GlobalVarDecl]
+    ) [GlobalDecl_Var]
+  ) [GlobalDeclList_NoEps]
+  MethodDeclList_NoEps(
+    MethodDeclList_Eps(
+    ) [MethodDeclList_Eps]
+    MethodDecl(
+      VoidType_Void(
+       main
+      ) [VoidType_Void]
+      MethodSignatureDerived1(
+        OptFormPars_Eps(
+        ) [OptFormPars_Eps]
+      ) [MethodSignatureDerived1]
+      VarDeclList_Eps(
+      ) [VarDeclList_Eps]
+      StatementList_NoEps(
+        StatementList_NoEps(
+          StatmentList_Eps(
+          ) [StatmentList_Eps]
+          StatementDesignator_Single(
+            DesignatorStatement_Expr(
+              DesignatorIdent(
+               x
+              ) [DesignatorIdent]
+              ExprList(
+                ExprTerm(
+                  TermOne(
+                    FactorNum(
+                     5
+                    ) [FactorNum]
+                  ) [TermOne]
+                ) [ExprTerm]
+                Addop_add(
+                ) [Addop_add]
+                TermOne(
+                  FactorDesignator(
+                    DesignatorIdent(
+                     y
+                    ) [DesignatorIdent]
+                  ) [FactorDesignator]
+                ) [TermOne]
+              ) [ExprList]
+            ) [DesignatorStatement_Expr]
+          ) [StatementDesignator_Single]
+        ) [StatementList_NoEps]
+        Statement_print(
+          ExprTerm(
+            TermOne(
+              FactorNum(
+               1
+              ) [FactorNum]
+            ) [TermOne]
+          ) [ExprTerm]
+        ) [Statement_print]
+      ) [StatementList_NoEps]
+    ) [MethodDecl]
+  ) [MethodDeclList_NoEps]
+) [Program]
+INFO  21:26:24,698 - ===================================
+ERROR 21:26:24,702 - Greska na liniji 7 : nekompatibilni tipovi u izrazu za mnozenje.1
+INFO  21:26:24,702 -  Print count calls = 1
+INFO  21:26:24,702 -  Deklarisanih promenljivih ima = 0
+INFO  21:26:24,702 - ====================================

@@ -1,0 +1,127 @@
+INFO  03:02:44,847 - Compiling source file: C:\Users\Djole\Desktop\PP_projekat\workspace\MJCompiler\test\program.mj
+INFO  03:02:44,895 - #6 program
+INFO  03:02:44,896 - #3 MJProgram
+INFO  03:02:44,896 - #3 int
+INFO  03:02:44,897 - #3 x
+INFO  03:02:44,898 - #9 ;
+INFO  03:02:44,899 - #3 int
+INFO  03:02:44,900 - #3 y
+INFO  03:02:44,900 - #9 ;
+INFO  03:02:44,900 - #7 {
+INFO  03:02:44,900 - #15 void
+INFO  03:02:44,902 - #3 main
+INFO  03:02:44,902 - #16 (
+INFO  03:02:44,902 - #17 )
+INFO  03:02:44,903 - #7 {
+INFO  03:02:44,904 - #3 x
+INFO  03:02:44,905 - #10 =
+INFO  03:02:44,905 - #2 5
+INFO  03:02:44,905 - #31 +
+INFO  03:02:44,906 - #3 y
+INFO  03:02:44,908 - #9 ;
+INFO  03:02:44,908 - #24 print
+INFO  03:02:44,908 - #16 (
+INFO  03:02:44,909 - #2 1
+INFO  03:02:44,909 - #17 )
+INFO  03:02:44,909 - #9 ;
+INFO  03:02:44,909 - #8 }
+INFO  03:02:44,909 - #8 }
+INFO  03:02:44,922 - Program(
+  ProgName(
+   MJProgram
+  ) [ProgName]
+  GlobalDeclList_NoEps(
+    GlobalDeclList_NoEps(
+      GlobalDeclList_Eps(
+      ) [GlobalDeclList_Eps]
+      GlobalDecl_Var(
+        GlobalVarDecl(
+          Type(
+           int
+          ) [Type]
+          GlobalVarDeclDefineList_Item(
+            GlobalVarDeclDefine(
+              VarDeclDefine_Single(
+               x
+              ) [VarDeclDefine_Single]
+            ) [GlobalVarDeclDefine]
+          ) [GlobalVarDeclDefineList_Item]
+        ) [GlobalVarDecl]
+      ) [GlobalDecl_Var]
+    ) [GlobalDeclList_NoEps]
+    GlobalDecl_Var(
+      GlobalVarDecl(
+        Type(
+         int
+        ) [Type]
+        GlobalVarDeclDefineList_Item(
+          GlobalVarDeclDefine(
+            VarDeclDefine_Single(
+             y
+            ) [VarDeclDefine_Single]
+          ) [GlobalVarDeclDefine]
+        ) [GlobalVarDeclDefineList_Item]
+      ) [GlobalVarDecl]
+    ) [GlobalDecl_Var]
+  ) [GlobalDeclList_NoEps]
+  MethodDeclList_NoEps(
+    MethodDeclList_Eps(
+    ) [MethodDeclList_Eps]
+    MethodDecl(
+      VoidType_Void(
+       main
+      ) [VoidType_Void]
+      MethodSignatureDerived1(
+        OptFormPars_Eps(
+        ) [OptFormPars_Eps]
+      ) [MethodSignatureDerived1]
+      VarDeclList_Eps(
+      ) [VarDeclList_Eps]
+      StatementList_NoEps(
+        StatementList_NoEps(
+          StatmentList_Eps(
+          ) [StatmentList_Eps]
+          StatementDesignator_Single(
+            DesignatorStatement_Expr(
+              DesignatorIdent(
+               x
+              ) [DesignatorIdent]
+              ExprList(
+                ExprTerm(
+                  TermOne(
+                    FactorNum(
+                     5
+                    ) [FactorNum]
+                  ) [TermOne]
+                ) [ExprTerm]
+                Addop_add(
+                ) [Addop_add]
+                TermOne(
+                  FactorDesignator(
+                    DesignatorIdent(
+                     y
+                    ) [DesignatorIdent]
+                  ) [FactorDesignator]
+                ) [TermOne]
+              ) [ExprList]
+            ) [DesignatorStatement_Expr]
+          ) [StatementDesignator_Single]
+        ) [StatementList_NoEps]
+        Statement_print(
+          ExprTerm(
+            TermOne(
+              FactorNum(
+               1
+              ) [FactorNum]
+            ) [TermOne]
+          ) [ExprTerm]
+        ) [Statement_print]
+      ) [StatementList_NoEps]
+    ) [MethodDecl]
+  ) [MethodDeclList_NoEps]
+) [Program]
+INFO  03:02:44,923 - ===================================
+ERROR 03:02:44,925 - Greska na liniji 9 :  los tip varijable 
+INFO  03:02:44,925 -  Print count calls = 1
+INFO  03:02:44,925 -  Deklarisanih promenljivih ima = 0
+INFO  03:02:44,925 - ====================================

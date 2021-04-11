@@ -1,0 +1,106 @@
+INFO  01:29:49,539 - Compiling source file: C:\Users\Djole\Desktop\PP_projekat\workspace\MJCompiler\test\program.mj
+INFO  01:29:49,584 - #6 program
+INFO  01:29:49,584 - #3 MJProgram
+INFO  01:29:49,584 - #3 int
+INFO  01:29:49,585 - #3 x
+INFO  01:29:49,586 - #9 ;
+INFO  01:29:49,587 - #3 int
+INFO  01:29:49,588 - #3 y
+INFO  01:29:49,588 - #9 ;
+INFO  01:29:49,588 - #7 {
+INFO  01:29:49,588 - #15 void
+INFO  01:29:49,589 - #3 main
+INFO  01:29:49,590 - #16 (
+INFO  01:29:49,590 - #17 )
+INFO  01:29:49,590 - #7 {
+INFO  01:29:49,591 - #3 x
+INFO  01:29:49,592 - #10 =
+INFO  01:29:49,592 - #2 5
+INFO  01:29:49,592 - #31 +
+INFO  01:29:49,593 - #9 ;
+ERROR 01:29:49,593 - 
+Sintaksna greska na liniji 6
+INFO  01:29:49,593 - #24 print
+INFO  01:29:49,593 - #16 (
+INFO  01:29:49,593 - #2 1
+INFO  01:29:49,594 - #17 )
+INFO  01:29:49,594 - #9 ;
+INFO  01:29:49,594 - #8 }
+INFO  01:29:49,594 - #8 }
+INFO  01:29:49,597 - Program(
+ MJProgram
+  GlobalDeclList_NoEps(
+    GlobalDeclList_NoEps(
+      GlobalDeclList_Eps(
+      ) [GlobalDeclList_Eps]
+      GlobalDecl_Var(
+        GlobalVarDecl(
+          Type(
+           int
+          ) [Type]
+          GlobalVarDeclDefineList_Item(
+            GlobalVarDeclDefine(
+              VarDeclDefine_Single(
+               x
+              ) [VarDeclDefine_Single]
+            ) [GlobalVarDeclDefine]
+          ) [GlobalVarDeclDefineList_Item]
+        ) [GlobalVarDecl]
+      ) [GlobalDecl_Var]
+    ) [GlobalDeclList_NoEps]
+    GlobalDecl_Var(
+      GlobalVarDecl(
+        Type(
+         int
+        ) [Type]
+        GlobalVarDeclDefineList_Item(
+          GlobalVarDeclDefine(
+            VarDeclDefine_Single(
+             y
+            ) [VarDeclDefine_Single]
+          ) [GlobalVarDeclDefine]
+        ) [GlobalVarDeclDefineList_Item]
+      ) [GlobalVarDecl]
+    ) [GlobalDecl_Var]
+  ) [GlobalDeclList_NoEps]
+  MethodDeclList_NoEps(
+    MethodDeclList_Eps(
+    ) [MethodDeclList_Eps]
+    MethodDecl(
+      VoidType_Void(
+      ) [VoidType_Void]
+     main
+      MethodSignatureDerived1(
+        OptFormPars_Eps(
+        ) [OptFormPars_Eps]
+      ) [MethodSignatureDerived1]
+      VarDeclList_Eps(
+      ) [VarDeclList_Eps]
+      StatementList_NoEps(
+        StatementList_NoEps(
+          StatmentList_Eps(
+          ) [StatmentList_Eps]
+          StatementDesignator_Single(
+            AssignopDesignatorStatementError(
+              DesignatorIdent(
+               x
+              ) [DesignatorIdent]
+            ) [AssignopDesignatorStatementError]
+          ) [StatementDesignator_Single]
+        ) [StatementList_NoEps]
+        Statement_print(
+          ExprTerm(
+            TermOne(
+              FactorNum(
+               1
+              ) [FactorNum]
+            ) [TermOne]
+          ) [ExprTerm]
+        ) [Statement_print]
+      ) [StatementList_NoEps]
+    ) [MethodDecl]
+  ) [MethodDeclList_NoEps]
+) [Program]
+INFO  01:29:49,597 - ===================================
+INFO  01:29:49,600 -  Print count calls = 1
+INFO  01:29:49,600 -  Deklarisanih promenljivih ima = 0

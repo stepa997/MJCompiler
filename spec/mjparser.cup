@@ -1,0 +1,303 @@
+
+package rs.ac.bg.etf.pp1;
+
+import java_cup.runtime.*;
+import org.apache.log4j.*;
+import rs.ac.bg.etf.pp1.ast.*;
+
+parser code {:
+boolean errorDetected = false;
+	
+
+	Logger log = Logger.getLogger(getClass());
+   
+   
+    // slede redefinisani metodi za prijavu gresaka radi izmene teksta poruke
+     
+    public void report_fatal_error(String message, Object info) throws java.lang.Exception {
+      done_parsing();
+      report_error(message, info);
+    }
+  
+    public void syntax_error(Symbol cur_token) {
+        report_error("\nSintaksna greska", cur_token);
+    }
+  
+    public void unrecovered_syntax_error(Symbol cur_token) throws java.lang.Exception {
+        report_fatal_error("Fatalna greska, parsiranje se ne moze nastaviti", cur_token);
+    }
+
+    public void report_error(String message, Object info) {
+    errorDetected = true;
+    	StringBuilder msg = new StringBuilder(message); 
+    	if (info instanceof Symbol)
+            msg.append (" na liniji ").append(((Symbol)info).left);
+        log.error(msg.toString());
+    }
+
+
+:}
+
+
+scan with {:
+	Symbol s = this.getScanner().next_token();
+	if (s != null && s.value != null) 
+		log.info(s.toString() + " " + s.value.toString());
+	return s;
+:}
+
+terminal Integer NUMCONST;
+terminal String IDENT;
+terminal Character CHARCONST;
+terminal String BOOLCONST;
+
+
+terminal PROG, OTVVITZGRD, ZATVITZGRD, TACKAZAP, JEDN, OTVUGLZGRD, PODELJENO, POSTO, 
+		 ZATUGLZGRD, VOID, OTVZGRD, ZATZGRD, ZAP, PUTA, VECEJEDN, VECE, TACKA, RAZLICITO,
+		 PRINT, READ, PLUSPLUS, MINUSMINUS, NEW, CONST, MINUS, PLUS, PUTAJEDN, POSTOJEDN,
+		 PODELJENOJEDN, JEDNJEDN, ILIILI, MINUSJEDN, MANJEJEDN, MANJE, CONTINUE, ABSTRACT,
+		 RETURN, CLASS, BREAK, PLUSJEDN, IF, ELSE, EXTENDS, FOR, II, AT, TAR  ;
+
+nonterminal GlobalDeclList, MethodDeclList, GlobalDecl, ConstDecl, GlobalVarDecl,
+			ClassDecl, AbstractClassDecl, TypeDummy, ConstValList, ConstValAssign,
+		 	VarDeclDefineList, VarDecl, VarDeclDefine, GlobalVarDeclDefineList, GlobalVarDeclDefine,
+			MethodSignature, StatementList, DesignatorStatement,
+			OptFormPars, FormPars, Statement, FormParDecl,
+			Assignop, Addop, AddopLeft, Mulop, MulopLeft, AddopRight, MulopRight, ArrayOnly, DesignatorAssignop ;
+
+
+nonterminal rs.etf.pp1.symboltable.concepts.Obj ProgName, ConstVal, Program, MethodDecl, VoidType, Designator, Expr, Term, TermLeft, ExprLeft, Factor;
+nonterminal rs.etf.pp1.symboltable.concepts.Struct Type, VarDeclList;
+ 
+Program ::= (Program) PROG ProgName:p GlobalDeclList OTVVITZGRD MethodDeclList ZATVITZGRD;
+
+ProgName ::= (ProgName) IDENT:progName;
+
+GlobalDeclList ::= (GlobalDeclList_NoEps) GlobalDeclList GlobalDecl
+					|
+					(GlobalDeclList_Eps)
+					;
+					
+GlobalDecl ::= (GlobalDecl_Const) ConstDecl
+				|
+				(GlobalDecl_Var) GlobalVarDecl
+				;
+				
+MethodDeclList ::= (MethodDeclList_NoEps) MethodDeclList MethodDecl
+					|
+					(MethodDeclList_Eps)
+					;
+
+ConstDecl ::= (ConstDecl) CONST Type ConstValList TACKAZAP;
+
+ConstValList ::= (ConstValList_List) ConstValList ZAP ConstValAssign
+				|
+				(ConstValList_Item) ConstValAssign
+				;
+				
+ConstValAssign ::= (ConstValAssign) IDENT:Iname JEDN ConstVal:Cval;
+
+ConstVal ::= (ConstVal_Num) NUMCONST:Nc
+			|
+			(ConstVal_Char) CHARCONST:Cc
+			|
+			(ConstVal_Bool) BOOLCONST:Bc
+			;
+
+VarDecl ::= (VarDecl) Type VarDeclDefineList TACKAZAP;
+		
+
+VarDeclDefineList ::= (VarDeclDefineList_List) VarDeclDefineList ZAP VarDeclDefine
+					|
+					(VarDeclnsideError) error ZAP VarDeclDefine
+					|
+					(VarDeclDefine_Item) VarDeclDefine
+					;
+					
+VarDeclDefine ::= (VarDeclDefine_Single) IDENT:Name
+				|
+				(VarDeclDefine_Array) IDENT:Name OTVUGLZGRD ZATUGLZGRD
+				;
+
+GlobalVarDecl ::= (GlobalVarDecl) Type GlobalVarDeclDefineList TACKAZAP 
+				  ;
+
+GlobalVarDeclDefineList ::= (GlobalVarDeclDefineList_List) GlobalVarDeclDefineList ZAP GlobalVarDeclDefine
+							|
+							(GlobalVarDeclDefineList_Item) GlobalVarDeclDefine
+							|
+							(ErrorGlobalVar) error
+							;
+							
+GlobalVarDeclDefine ::= (GlobalVarDeclDefine) VarDeclDefine; 
+
+MethodDecl ::= (MethodDecl) VoidType:VoidType MethodSignature VarDeclList OTVVITZGRD StatementList ZATVITZGRD;
+
+VoidType ::= (VoidType_Type) Type:MethodType IDENT:MethodName
+			|
+			(VoidType_Void) VOID:MethodType IDENT:MethodName
+			;
+			
+MethodSignature ::= OTVZGRD OptFormPars ZATZGRD;
+
+OptFormPars ::= (OptFormPars_NoEps) FormPars
+				|
+				(OptFormPars_Eps) 
+				;
+			
+VarDeclList ::= (VarDeclList_NoEps) VarDeclList VarDecl
+				|
+				(VarDeclList_Eps)
+				;
+StatementList ::= (StatementList_NoEps) StatementList Statement
+				|
+				(StatmentList_Eps)
+				;
+
+FormPars ::= (FormPars_List) FormPars ZAP FormParDecl
+			|
+			(FormPars_Decl) FormParDecl
+			;
+			
+FormParDecl ::= (FormParDecl_Single) Type IDENT
+				| 
+				(FormParDecl_Array) Type IDENT OTVUGLZGRD ZATUGLZGRD
+				;
+
+Type ::= (Type) IDENT:typeName;
+
+Statement ::= (StatementDesignator_Single) DesignatorStatement TACKAZAP
+			  |
+			  (Statement_read) READ OTVZGRD Designator ZATZGRD TACKAZAP
+			  |
+			  (Statement_print) PRINT OTVZGRD Expr ZATZGRD TACKAZAP
+			  |
+			  (Statement_numconst) PRINT OTVZGRD Expr ZAP NUMCONST ZATZGRD TACKAZAP
+			  ;
+			  
+DesignatorStatement ::= (DesignatorStatement_Expr) Designator JEDN Expr
+						|
+						(DesignatorArray) Designator JEDN Designator AT Designator 
+						|
+						(DesignatorTar) Designator JEDN OTVUGLZGRD Factor TAR Factor ZATUGLZGRD
+						|
+						(DesignatorStatement_Expr_addRight) Designator AddopRight Expr
+						|
+						(DesignatorStatement_Expr_mulRigth) Designator MulopRight Expr
+						|
+						(DesignatorStatement_Plus) Designator PLUSPLUS
+						|
+						(DesignatorStatement_Minus) Designator MINUSMINUS
+						|
+						(AssignopDesignatorStatementError) Designator JEDN error
+						|
+						(Modifikacija) Designator JEDN TAR Expr
+						|
+						(BoolModifikacija) Designator JEDN AT Designator
+						;
+						
+DesignatorAssignop ::= (Des_Assignop_ADD) Designator AddopRight
+						|
+						(Des_Assignop_Mul) Designator MulopRight
+						;
+						
+Assignop ::= (Assignop_equal) JEDN
+			|
+			(AddopRight_add_ass) PLUSJEDN
+			|
+			(AddopRight_sub_ass) MINUSJEDN
+			|
+			(MulopRight_mul_ass) PUTAJEDN
+			|
+			(MulopRight_div_ass) PODELJENOJEDN
+			|
+			(MulopRight_proc_ass) POSTOJEDN
+			 ;
+			 
+AddopRight ::= (AddopRight_add) PLUSJEDN
+				|
+				(AddopRight_sub) MINUSJEDN
+				;
+				
+MulopRight ::= (MulopRight_mul) PUTAJEDN
+				|
+				(MulopRight_div) PODELJENOJEDN
+				|
+				(MulopRight_proc) POSTOJEDN
+				;
+				
+Expr ::= (ExprRight) ExprLeft AddopRight Expr
+		|
+		(LeftExpr) ExprLeft
+		;
+
+ExprLeft ::= (ExprList) ExprLeft AddopLeft TermLeft
+		|
+		(ExprTerm) Term
+		|
+		(ExprTermMinus) MINUS Term
+		;
+		
+Term ::= (TermRight_term) TermLeft MulopRight Term
+		|
+		(TermLeft_term) TermLeft
+		;
+
+TermLeft ::= (TermFactor) TermLeft MulopLeft Factor 
+		 |
+		 (TermOne) Factor
+		 ;
+
+Factor ::= (FactorNum) NUMCONST 
+		   |
+		   (FactorChar) CHARCONST
+		   |
+		   (FactorExpr) OTVZGRD Expr ZATZGRD
+		   |
+		   (FactorBool) BOOLCONST
+		   |
+		   (NewType1) NEW Type OTVUGLZGRD Expr ZATUGLZGRD
+		   |
+		   (NewType0) NEW Type
+		   |
+		   (FactorDesignator) Designator
+		   |
+		   (FactorDesignatorConst) Designator OTVZGRD ZATZGRD
+		   ;
+		   
+
+		   		   
+Designator ::= (DesignatorExpr) ArrayOnly OTVUGLZGRD Expr ZATUGLZGRD			
+				|
+				(DesignatorIdent) IDENT:IDName
+				;
+				
+ArrayOnly ::= (ArrayOnly) Designator;
+
+				
+
+Addop ::= (Addop_left) AddopLeft
+			|
+			(Addop_right) AddopRight
+			;
+			
+Mulop ::= (Mulop_left) MulopLeft
+			|
+			(Mulop_right) MulopRight
+			;
+
+AddopLeft ::= (Addop_add) PLUS
+		 |
+		 (Addop_sub) MINUS
+		 ;
+		 
+MulopLeft ::= (Mulop_mul) PUTA
+		  |
+		  (Mulop_div) PODELJENO
+		  |
+		  (Mulop_proc) POSTO
+		  ;
+
+
+
+

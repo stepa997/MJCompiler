@@ -1,0 +1,344 @@
+INFO  18:23:10,932 - Compiling source file: C:\Users\Djole\Desktop\PP_projekat\workspace\MJCompiler\test\program.mj
+INFO  18:23:10,994 - #6 program
+INFO  18:23:10,994 - #3 test301
+INFO  18:23:10,994 - #29 const
+INFO  18:23:10,996 - #3 int
+INFO  18:23:10,996 - #3 nula
+INFO  18:23:10,997 - #10 =
+INFO  18:23:10,998 - #2 0
+INFO  18:23:10,998 - #9 ;
+INFO  18:23:10,999 - #29 const
+INFO  18:23:11,000 - #3 int
+INFO  18:23:11,000 - #3 jedan
+INFO  18:23:11,000 - #10 =
+INFO  18:23:11,001 - #2 1
+INFO  18:23:11,001 - #9 ;
+INFO  18:23:11,001 - #29 const
+INFO  18:23:11,001 - #3 int
+INFO  18:23:11,001 - #3 pet
+INFO  18:23:11,001 - #10 =
+INFO  18:23:11,001 - #2 5
+INFO  18:23:11,001 - #9 ;
+INFO  18:23:11,001 - #3 int
+INFO  18:23:11,102 - #3 niz
+INFO  18:23:11,102 - #11 [
+INFO  18:23:11,103 - #14 ]
+INFO  18:23:11,103 - #9 ;
+INFO  18:23:11,104 - #3 char
+INFO  18:23:11,105 - #3 nizch
+INFO  18:23:11,105 - #11 [
+INFO  18:23:11,105 - #14 ]
+INFO  18:23:11,105 - #9 ;
+INFO  18:23:11,105 - #7 {
+INFO  18:23:11,105 - #15 void
+INFO  18:23:11,106 - #3 main
+INFO  18:23:11,106 - #16 (
+INFO  18:23:11,106 - #17 )
+INFO  18:23:11,107 - #3 int
+INFO  18:23:11,107 - #3 bodovi
+INFO  18:23:11,107 - #9 ;
+INFO  18:23:11,108 - #3 int
+INFO  18:23:11,108 - #3 a
+INFO  18:23:11,109 - #9 ;
+INFO  18:23:11,109 - #3 int
+INFO  18:23:11,109 - #3 c
+INFO  18:23:11,109 - #9 ;
+INFO  18:23:11,109 - #7 {
+INFO  18:23:11,109 - #3 bodovi
+INFO  18:23:11,111 - #10 =
+INFO  18:23:11,111 - #2 5
+INFO  18:23:11,111 - #9 ;
+INFO  18:23:11,111 - #3 a
+INFO  18:23:11,112 - #10 =
+INFO  18:23:11,112 - #2 2
+INFO  18:23:11,112 - #9 ;
+INFO  18:23:11,112 - #3 c
+INFO  18:23:11,112 - #10 =
+INFO  18:23:11,112 - #2 3
+INFO  18:23:11,112 - #9 ;
+INFO  18:23:11,112 - #3 a
+INFO  18:23:11,112 - #10 =
+INFO  18:23:11,117 - #3 c
+INFO  18:23:11,117 - #10 =
+INFO  18:23:11,117 - #3 bodovi
+INFO  18:23:11,117 - #9 ;
+INFO  18:23:11,117 - #24 print
+INFO  18:23:11,118 - #16 (
+INFO  18:23:11,118 - #3 a
+INFO  18:23:11,118 - #17 )
+INFO  18:23:11,118 - #9 ;
+INFO  18:23:11,118 - #24 print
+INFO  18:23:11,118 - #16 (
+INFO  18:23:11,118 - #3 c
+INFO  18:23:11,118 - #17 )
+INFO  18:23:11,118 - #9 ;
+INFO  18:23:11,118 - #24 print
+INFO  18:23:11,118 - #16 (
+INFO  18:23:11,118 - #3 bodovi
+INFO  18:23:11,118 - #17 )
+INFO  18:23:11,119 - #9 ;
+INFO  18:23:11,119 - #8 }
+INFO  18:23:11,119 - #8 }
+INFO  18:23:11,131 - Program(
+  ProgName(
+   test301
+  ) [ProgName]
+  GlobalDeclList_NoEps(
+    GlobalDeclList_NoEps(
+      GlobalDeclList_NoEps(
+        GlobalDeclList_NoEps(
+          GlobalDeclList_NoEps(
+            GlobalDeclList_Eps(
+            ) [GlobalDeclList_Eps]
+            GlobalDecl_Const(
+              ConstDecl(
+                Type(
+                 int
+                ) [Type]
+                ConstValList_Item(
+                  ConstValAssign(
+                   nula
+                    ConstVal_Num(
+                     0
+                    ) [ConstVal_Num]
+                  ) [ConstValAssign]
+                ) [ConstValList_Item]
+              ) [ConstDecl]
+            ) [GlobalDecl_Const]
+          ) [GlobalDeclList_NoEps]
+          GlobalDecl_Const(
+            ConstDecl(
+              Type(
+               int
+              ) [Type]
+              ConstValList_Item(
+                ConstValAssign(
+                 jedan
+                  ConstVal_Num(
+                   1
+                  ) [ConstVal_Num]
+                ) [ConstValAssign]
+              ) [ConstValList_Item]
+            ) [ConstDecl]
+          ) [GlobalDecl_Const]
+        ) [GlobalDeclList_NoEps]
+        GlobalDecl_Const(
+          ConstDecl(
+            Type(
+             int
+            ) [Type]
+            ConstValList_Item(
+              ConstValAssign(
+               pet
+                ConstVal_Num(
+                 5
+                ) [ConstVal_Num]
+              ) [ConstValAssign]
+            ) [ConstValList_Item]
+          ) [ConstDecl]
+        ) [GlobalDecl_Const]
+      ) [GlobalDeclList_NoEps]
+      GlobalDecl_Var(
+        GlobalVarDecl(
+          Type(
+           int
+          ) [Type]
+          GlobalVarDeclDefineList_Item(
+            GlobalVarDeclDefine(
+              VarDeclDefine_Array(
+               niz
+              ) [VarDeclDefine_Array]
+            ) [GlobalVarDeclDefine]
+          ) [GlobalVarDeclDefineList_Item]
+        ) [GlobalVarDecl]
+      ) [GlobalDecl_Var]
+    ) [GlobalDeclList_NoEps]
+    GlobalDecl_Var(
+      GlobalVarDecl(
+        Type(
+         char
+        ) [Type]
+        GlobalVarDeclDefineList_Item(
+          GlobalVarDeclDefine(
+            VarDeclDefine_Array(
+             nizch
+            ) [VarDeclDefine_Array]
+          ) [GlobalVarDeclDefine]
+        ) [GlobalVarDeclDefineList_Item]
+      ) [GlobalVarDecl]
+    ) [GlobalDecl_Var]
+  ) [GlobalDeclList_NoEps]
+  MethodDeclList_NoEps(
+    MethodDeclList_Eps(
+    ) [MethodDeclList_Eps]
+    MethodDecl(
+      VoidType_Void(
+       main
+      ) [VoidType_Void]
+      MethodSignatureDerived1(
+        OptFormPars_Eps(
+        ) [OptFormPars_Eps]
+      ) [MethodSignatureDerived1]
+      VarDeclList_NoEps(
+        VarDeclList_NoEps(
+          VarDeclList_NoEps(
+            VarDeclList_Eps(
+            ) [VarDeclList_Eps]
+            VarDecl(
+              Type(
+               int
+              ) [Type]
+              VarDeclDefine_Item(
+                VarDeclDefine_Single(
+                 bodovi
+                ) [VarDeclDefine_Single]
+              ) [VarDeclDefine_Item]
+            ) [VarDecl]
+          ) [VarDeclList_NoEps]
+          VarDecl(
+            Type(
+             int
+            ) [Type]
+            VarDeclDefine_Item(
+              VarDeclDefine_Single(
+               a
+              ) [VarDeclDefine_Single]
+            ) [VarDeclDefine_Item]
+          ) [VarDecl]
+        ) [VarDeclList_NoEps]
+        VarDecl(
+          Type(
+           int
+          ) [Type]
+          VarDeclDefine_Item(
+            VarDeclDefine_Single(
+             c
+            ) [VarDeclDefine_Single]
+          ) [VarDeclDefine_Item]
+        ) [VarDecl]
+      ) [VarDeclList_NoEps]
+      StatementList_NoEps(
+        StatementList_NoEps(
+          StatementList_NoEps(
+            StatementList_NoEps(
+              StatementList_NoEps(
+                StatementList_NoEps(
+                  StatementList_NoEps(
+                    StatmentList_Eps(
+                    ) [StatmentList_Eps]
+                    StatementDesignator_Single(
+                      DesignatorStatement_Expr(
+                        DesignatorIdent(
+                         bodovi
+                        ) [DesignatorIdent]
+                        ExprTerm(
+                          TermOne(
+                            FactorNum(
+                             5
+                            ) [FactorNum]
+                          ) [TermOne]
+                        ) [ExprTerm]
+                      ) [DesignatorStatement_Expr]
+                    ) [StatementDesignator_Single]
+                  ) [StatementList_NoEps]
+                  StatementDesignator_Single(
+                    DesignatorStatement_Expr(
+                      DesignatorIdent(
+                       a
+                      ) [DesignatorIdent]
+                      ExprTerm(
+                        TermOne(
+                          FactorNum(
+                           2
+                          ) [FactorNum]
+                        ) [TermOne]
+                      ) [ExprTerm]
+                    ) [DesignatorStatement_Expr]
+                  ) [StatementDesignator_Single]
+                ) [StatementList_NoEps]
+                StatementDesignator_Single(
+                  DesignatorStatement_Expr(
+                    DesignatorIdent(
+                     c
+                    ) [DesignatorIdent]
+                    ExprTerm(
+                      TermOne(
+                        FactorNum(
+                         3
+                        ) [FactorNum]
+                      ) [TermOne]
+                    ) [ExprTerm]
+                  ) [DesignatorStatement_Expr]
+                ) [StatementDesignator_Single]
+              ) [StatementList_NoEps]
+              StatementDesignator_Single(
+                DesignatorStatement_Exprst(
+                  DesignatorIdent(
+                   a
+                  ) [DesignatorIdent]
+                  DesignatorStatement_Expr(
+                    DesignatorIdent(
+                     c
+                    ) [DesignatorIdent]
+                    ExprTerm(
+                      TermOne(
+                        FactorDesignator(
+                          DesignatorIdent(
+                           bodovi
+                          ) [DesignatorIdent]
+                        ) [FactorDesignator]
+                      ) [TermOne]
+                    ) [ExprTerm]
+                  ) [DesignatorStatement_Expr]
+                ) [DesignatorStatement_Exprst]
+              ) [StatementDesignator_Single]
+            ) [StatementList_NoEps]
+            Statement_print(
+              LeftExpr(
+                ExprTerm(
+                  TermOne(
+                    FactorDesignator(
+                      DesignatorIdent(
+                       a
+                      ) [DesignatorIdent]
+                    ) [FactorDesignator]
+                  ) [TermOne]
+                ) [ExprTerm]
+              ) [LeftExpr]
+            ) [Statement_print]
+          ) [StatementList_NoEps]
+          Statement_print(
+            LeftExpr(
+              ExprTerm(
+                TermOne(
+                  FactorDesignator(
+                    DesignatorIdent(
+                     c
+                    ) [DesignatorIdent]
+                  ) [FactorDesignator]
+                ) [TermOne]
+              ) [ExprTerm]
+            ) [LeftExpr]
+          ) [Statement_print]
+        ) [StatementList_NoEps]
+        Statement_print(
+          LeftExpr(
+            ExprTerm(
+              TermOne(
+                FactorDesignator(
+                  DesignatorIdent(
+                   bodovi
+                  ) [DesignatorIdent]
+                ) [FactorDesignator]
+              ) [TermOne]
+            ) [ExprTerm]
+          ) [LeftExpr]
+        ) [Statement_print]
+      ) [StatementList_NoEps]
+    ) [MethodDecl]
+  ) [MethodDeclList_NoEps]
+) [Program]
+INFO  18:23:11,131 - ===================================
+INFO  18:23:11,135 -  Print count calls = 3
+INFO  18:23:11,135 -  Deklarisanih promenljivih ima = 0
+INFO  18:23:11,135 - ====================================

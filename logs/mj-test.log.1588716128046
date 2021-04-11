@@ -1,0 +1,138 @@
+INFO  23:37:03,751 - Compiling source file: C:\Users\Djole\Desktop\PP_projekat\workspace\MJCompiler\test\program.mj
+INFO  23:37:03,801 - #6 program
+INFO  23:37:03,801 - #3 MJProgram
+INFO  23:37:03,801 - #3 int
+INFO  23:37:03,803 - #3 x
+INFO  23:37:03,803 - #9 ;
+INFO  23:37:03,804 - #3 int
+INFO  23:37:03,805 - #3 y
+INFO  23:37:03,806 - #9 ;
+INFO  23:37:03,806 - #7 {
+INFO  23:37:03,806 - #15 void
+INFO  23:37:03,807 - #3 main
+INFO  23:37:03,807 - #16 (
+INFO  23:37:03,807 - #17 )
+INFO  23:37:03,808 - #7 {
+INFO  23:37:03,809 - #3 x
+INFO  23:37:03,810 - #10 =
+INFO  23:37:03,810 - #2 5
+INFO  23:37:03,810 - #31 +
+INFO  23:37:03,810 - #3 y
+INFO  23:37:03,813 - #31 +
+INFO  23:37:03,813 - #2 3
+INFO  23:37:03,813 - #9 ;
+INFO  23:37:03,814 - #24 print
+INFO  23:37:03,815 - #16 (
+INFO  23:37:03,815 - #2 1
+INFO  23:37:03,815 - #17 )
+INFO  23:37:03,815 - #9 ;
+INFO  23:37:03,815 - #8 }
+INFO  23:37:03,815 - #8 }
+INFO  23:37:03,827 - Program(
+  ProgName(
+   MJProgram
+  ) [ProgName]
+  GlobalDeclList_NoEps(
+    GlobalDeclList_NoEps(
+      GlobalDeclList_Eps(
+      ) [GlobalDeclList_Eps]
+      GlobalDecl_Var(
+        GlobalVarDecl(
+          Type(
+           int
+          ) [Type]
+          GlobalVarDeclDefineList_Item(
+            GlobalVarDeclDefine(
+              VarDeclDefine_Single(
+               x
+              ) [VarDeclDefine_Single]
+            ) [GlobalVarDeclDefine]
+          ) [GlobalVarDeclDefineList_Item]
+        ) [GlobalVarDecl]
+      ) [GlobalDecl_Var]
+    ) [GlobalDeclList_NoEps]
+    GlobalDecl_Var(
+      GlobalVarDecl(
+        Type(
+         int
+        ) [Type]
+        GlobalVarDeclDefineList_Item(
+          GlobalVarDeclDefine(
+            VarDeclDefine_Single(
+             y
+            ) [VarDeclDefine_Single]
+          ) [GlobalVarDeclDefine]
+        ) [GlobalVarDeclDefineList_Item]
+      ) [GlobalVarDecl]
+    ) [GlobalDecl_Var]
+  ) [GlobalDeclList_NoEps]
+  MethodDeclList_NoEps(
+    MethodDeclList_Eps(
+    ) [MethodDeclList_Eps]
+    MethodDecl(
+      VoidType_Void(
+       main
+      ) [VoidType_Void]
+      MethodSignatureDerived1(
+        OptFormPars_Eps(
+        ) [OptFormPars_Eps]
+      ) [MethodSignatureDerived1]
+      VarDeclList_Eps(
+      ) [VarDeclList_Eps]
+      StatementList_NoEps(
+        StatementList_NoEps(
+          StatmentList_Eps(
+          ) [StatmentList_Eps]
+          StatementDesignator_Single(
+            DesignatorStatement_Expr(
+              DesignatorIdent(
+               x
+              ) [DesignatorIdent]
+              ExprList(
+                ExprList(
+                  ExprTerm(
+                    TermOne(
+                      FactorNum(
+                       5
+                      ) [FactorNum]
+                    ) [TermOne]
+                  ) [ExprTerm]
+                  Addop_add(
+                  ) [Addop_add]
+                  TermOne(
+                    FactorDesignator(
+                      DesignatorIdent(
+                       y
+                      ) [DesignatorIdent]
+                    ) [FactorDesignator]
+                  ) [TermOne]
+                ) [ExprList]
+                Addop_add(
+                ) [Addop_add]
+                TermOne(
+                  FactorNum(
+                   3
+                  ) [FactorNum]
+                ) [TermOne]
+              ) [ExprList]
+            ) [DesignatorStatement_Expr]
+          ) [StatementDesignator_Single]
+        ) [StatementList_NoEps]
+        Statement_print(
+          ExprTerm(
+            TermOne(
+              FactorNum(
+               1
+              ) [FactorNum]
+            ) [TermOne]
+          ) [ExprTerm]
+        ) [Statement_print]
+      ) [StatementList_NoEps]
+    ) [MethodDecl]
+  ) [MethodDeclList_NoEps]
+) [Program]
+INFO  23:37:03,828 - ===================================
+ERROR 23:37:03,831 - Greska na liniji null : 1 nekompatibilni tipovi u dodeli vrednosti null da da 
+INFO  23:37:03,831 -  Print count calls = 1
+INFO  23:37:03,831 -  Deklarisanih promenljivih ima = 0
+INFO  23:37:03,831 - ====================================

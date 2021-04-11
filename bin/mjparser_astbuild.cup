@@ -1,0 +1,333 @@
+
+package rs.ac.bg.etf.pp1;
+
+import java_cup.runtime.*;
+import org.apache.log4j.*;
+import rs.ac.bg.etf.pp1.ast.*;
+
+parser code {:
+boolean errorDetected = false;
+	
+
+	Logger log = Logger.getLogger(getClass());
+   
+   
+    // slede redefinisani metodi za prijavu gresaka radi izmene teksta poruke
+     
+    public void report_fatal_error(String message, Object info) throws java.lang.Exception {
+      done_parsing();
+      report_error(message, info);
+    }
+  
+    public void syntax_error(Symbol cur_token) {
+        report_error("\nSintaksna greska", cur_token);
+    }
+  
+    public void unrecovered_syntax_error(Symbol cur_token) throws java.lang.Exception {
+        report_fatal_error("Fatalna greska, parsiranje se ne moze nastaviti", cur_token);
+    }
+
+    public void report_error(String message, Object info) {
+    errorDetected = true;
+    	StringBuilder msg = new StringBuilder(message); 
+    	if (info instanceof Symbol)
+            msg.append (" na liniji ").append(((Symbol)info).left);
+        log.error(msg.toString());
+    }
+
+
+:}
+
+
+scan with {:
+	Symbol s = this.getScanner().next_token();
+	if (s != null && s.value != null) 
+		log.info(s.toString() + " " + s.value.toString());
+	return s;
+:}
+
+terminal Integer NUMCONST;
+terminal String IDENT;
+terminal Character CHARCONST;
+terminal String BOOLCONST;
+
+
+terminal PROG, OTVVITZGRD, ZATVITZGRD, TACKAZAP, JEDN, OTVUGLZGRD, PODELJENO, POSTO, 
+		 ZATUGLZGRD, VOID, OTVZGRD, ZATZGRD, ZAP, PUTA, VECEJEDN, VECE, TACKA, RAZLICITO,
+		 PRINT, READ, PLUSPLUS, MINUSMINUS, NEW, CONST, MINUS, PLUS, PUTAJEDN, POSTOJEDN,
+		 PODELJENOJEDN, JEDNJEDN, ILIILI, MINUSJEDN, MANJEJEDN, MANJE, CONTINUE, ABSTRACT,
+		 RETURN, CLASS, BREAK, PLUSJEDN, IF, ELSE, EXTENDS, FOR, II, AT, TAR  ;
+
+nonterminal GlobalDeclList GlobalDeclList;
+nonterminal MethodDeclList MethodDeclList;
+nonterminal GlobalDecl GlobalDecl;
+nonterminal ConstDecl ConstDecl;
+nonterminal GlobalVarDecl GlobalVarDecl;
+nonterminal
+			ClassDecl ClassDecl;
+nonterminal AbstractClassDecl AbstractClassDecl;
+nonterminal TypeDummy TypeDummy;
+nonterminal ConstValList ConstValList;
+nonterminal ConstValAssign ConstValAssign;
+nonterminal
+		 	VarDeclDefineList VarDeclDefineList;
+nonterminal VarDecl VarDecl;
+nonterminal VarDeclDefine VarDeclDefine;
+nonterminal GlobalVarDeclDefineList GlobalVarDeclDefineList;
+nonterminal GlobalVarDeclDefine GlobalVarDeclDefine;
+nonterminal
+			MethodSignature MethodSignature;
+nonterminal StatementList StatementList;
+nonterminal DesignatorStatement DesignatorStatement;
+nonterminal
+			OptFormPars OptFormPars;
+nonterminal FormPars FormPars;
+nonterminal Statement Statement;
+nonterminal FormParDecl FormParDecl;
+nonterminal
+			Assignop Assignop;
+nonterminal Addop Addop;
+nonterminal AddopLeft AddopLeft;
+nonterminal Mulop Mulop;
+nonterminal MulopLeft MulopLeft;
+nonterminal AddopRight AddopRight;
+nonterminal MulopRight MulopRight;
+nonterminal ArrayOnly ArrayOnly;
+nonterminal DesignatorAssignop DesignatorAssignop ;
+
+
+nonterminal rs.etf.pp1.symboltable.concepts.Obj ProgName, ConstVal, Program, MethodDecl, VoidType, Designator, Expr, Term, TermLeft, ExprLeft, Factor;
+nonterminal rs.etf.pp1.symboltable.concepts.Struct Type, VarDeclList;
+ 
+Program ::= (Program) PROG ProgName:p GlobalDeclList:G1 OTVVITZGRD MethodDeclList:M2 ZATVITZGRD {: RESULT=new Program(p, G1, M2); RESULT.setLine(pleft); :};
+
+ProgName ::= (ProgName) IDENT:progName {: RESULT=new ProgName(progName); RESULT.setLine(progNameleft); :};
+
+GlobalDeclList ::= (GlobalDeclList_NoEps) GlobalDeclList:G1 GlobalDecl:G2 {: RESULT=new GlobalDeclList_NoEps(G1, G2); RESULT.setLine(G1left); :}
+					|
+					(GlobalDeclList_Eps) {: RESULT=new GlobalDeclList_Eps(); :}
+					;
+					
+GlobalDecl ::= (GlobalDecl_Const) ConstDecl:C1 {: RESULT=new GlobalDecl_Const(C1); RESULT.setLine(C1left); :}
+				|
+				(GlobalDecl_Var) GlobalVarDecl:G1 {: RESULT=new GlobalDecl_Var(G1); RESULT.setLine(G1left); :}
+				;
+				
+MethodDeclList ::= (MethodDeclList_NoEps) MethodDeclList:M1 MethodDecl:M2 {: RESULT=new MethodDeclList_NoEps(M1, M2); RESULT.setLine(M1left); :}
+					|
+					(MethodDeclList_Eps) {: RESULT=new MethodDeclList_Eps(); :}
+					;
+
+ConstDecl ::= (ConstDecl) CONST Type:T1 ConstValList:C2 TACKAZAP {: RESULT=new ConstDecl(T1, C2); RESULT.setLine(T1left); :};
+
+ConstValList ::= (ConstValList_List) ConstValList:C1 ZAP ConstValAssign:C2 {: RESULT=new ConstValList_List(C1, C2); RESULT.setLine(C1left); :}
+				|
+				(ConstValList_Item) ConstValAssign:C1 {: RESULT=new ConstValList_Item(C1); RESULT.setLine(C1left); :}
+				;
+				
+ConstValAssign ::= (ConstValAssign) IDENT:Iname JEDN ConstVal:Cval {: RESULT=new ConstValAssign(Iname, Cval); RESULT.setLine(Inameleft); :};
+
+ConstVal ::= (ConstVal_Num) NUMCONST:Nc {: RESULT=new ConstVal_Num(Nc); RESULT.setLine(Ncleft); :}
+			|
+			(ConstVal_Char) CHARCONST:Cc {: RESULT=new ConstVal_Char(Cc); RESULT.setLine(Ccleft); :}
+			|
+			(ConstVal_Bool) BOOLCONST:Bc {: RESULT=new ConstVal_Bool(Bc); RESULT.setLine(Bcleft); :}
+			;
+
+VarDecl ::= (VarDecl) Type:T1 VarDeclDefineList:V2 TACKAZAP {: RESULT=new VarDecl(T1, V2); RESULT.setLine(T1left); :};
+		
+
+VarDeclDefineList ::= (VarDeclDefineList_List) VarDeclDefineList:V1 ZAP VarDeclDefine:V2 {: RESULT=new VarDeclDefineList_List(V1, V2); RESULT.setLine(V1left); :}
+					|
+					(VarDeclnsideError) error ZAP VarDeclDefine:V1 {: RESULT=new VarDeclnsideError(V1); RESULT.setLine(V1left); :}
+					|
+					(VarDeclDefine_Item) VarDeclDefine:V1 {: RESULT=new VarDeclDefine_Item(V1); RESULT.setLine(V1left); :}
+					;
+					
+VarDeclDefine ::= (VarDeclDefine_Single) IDENT:Name {: RESULT=new VarDeclDefine_Single(Name); RESULT.setLine(Nameleft); :}
+				|
+				(VarDeclDefine_Array) IDENT:Name OTVUGLZGRD ZATUGLZGRD {: RESULT=new VarDeclDefine_Array(Name); RESULT.setLine(Nameleft); :}
+				;
+
+GlobalVarDecl ::= (GlobalVarDecl) Type:T1 GlobalVarDeclDefineList:G2 TACKAZAP {: RESULT=new GlobalVarDecl(T1, G2); RESULT.setLine(T1left); :} 
+				  ;
+
+GlobalVarDeclDefineList ::= (GlobalVarDeclDefineList_List) GlobalVarDeclDefineList:G1 ZAP GlobalVarDeclDefine:G2 {: RESULT=new GlobalVarDeclDefineList_List(G1, G2); RESULT.setLine(G1left); :}
+							|
+							(GlobalVarDeclDefineList_Item) GlobalVarDeclDefine:G1 {: RESULT=new GlobalVarDeclDefineList_Item(G1); RESULT.setLine(G1left); :}
+							|
+							(ErrorGlobalVar) error {: RESULT=new ErrorGlobalVar(); :}
+							;
+							
+GlobalVarDeclDefine ::= (GlobalVarDeclDefine) VarDeclDefine:V1 {: RESULT=new GlobalVarDeclDefine(V1); RESULT.setLine(V1left); :}; 
+
+MethodDecl ::= (MethodDecl) VoidType:VoidType MethodSignature:M1 VarDeclList:V2 OTVVITZGRD StatementList:S3 ZATVITZGRD {: RESULT=new MethodDecl(VoidType, M1, V2, S3); RESULT.setLine(VoidTypeleft); :};
+
+VoidType ::= (VoidType_Type) Type:MethodType IDENT:MethodName {: RESULT=new VoidType_Type(MethodType, MethodName); RESULT.setLine(MethodTypeleft); :}
+			|
+			(VoidType_Void) VOID:MethodType IDENT:MethodName {: RESULT=new VoidType_Void(MethodName); RESULT.setLine(MethodNameleft); :}
+			;
+			
+MethodSignature ::= OTVZGRD OptFormPars:O1 ZATZGRD {: RESULT=new MethodSignatureDerived1(O1); RESULT.setLine(O1left); :};
+
+OptFormPars ::= (OptFormPars_NoEps) FormPars:F1 {: RESULT=new OptFormPars_NoEps(F1); RESULT.setLine(F1left); :}
+				|
+				(OptFormPars_Eps) {: RESULT=new OptFormPars_Eps(); :} 
+				;
+			
+VarDeclList ::= (VarDeclList_NoEps) VarDeclList:V1 VarDecl:V2 {: RESULT=new VarDeclList_NoEps(V1, V2); RESULT.setLine(V1left); :}
+				|
+				(VarDeclList_Eps) {: RESULT=new VarDeclList_Eps(); :}
+				;
+StatementList ::= (StatementList_NoEps) StatementList:S1 Statement:S2 {: RESULT=new StatementList_NoEps(S1, S2); RESULT.setLine(S1left); :}
+				|
+				(StatmentList_Eps) {: RESULT=new StatmentList_Eps(); :}
+				;
+
+FormPars ::= (FormPars_List) FormPars:F1 ZAP FormParDecl:F2 {: RESULT=new FormPars_List(F1, F2); RESULT.setLine(F1left); :}
+			|
+			(FormPars_Decl) FormParDecl:F1 {: RESULT=new FormPars_Decl(F1); RESULT.setLine(F1left); :}
+			;
+			
+FormParDecl ::= (FormParDecl_Single) Type:T1 IDENT:I2 {: RESULT=new FormParDecl_Single(T1, I2); RESULT.setLine(T1left); :}
+				| 
+				(FormParDecl_Array) Type:T1 IDENT:I2 OTVUGLZGRD ZATUGLZGRD {: RESULT=new FormParDecl_Array(T1, I2); RESULT.setLine(T1left); :}
+				;
+
+Type ::= (Type) IDENT:typeName {: RESULT=new Type(typeName); RESULT.setLine(typeNameleft); :};
+
+Statement ::= (StatementDesignator_Single) DesignatorStatement:D1 TACKAZAP {: RESULT=new StatementDesignator_Single(D1); RESULT.setLine(D1left); :}
+			  |
+			  (Statement_read) READ OTVZGRD Designator:D1 ZATZGRD TACKAZAP {: RESULT=new Statement_read(D1); RESULT.setLine(D1left); :}
+			  |
+			  (Statement_print) PRINT OTVZGRD Expr:E1 ZATZGRD TACKAZAP {: RESULT=new Statement_print(E1); RESULT.setLine(E1left); :}
+			  |
+			  (Statement_numconst) PRINT OTVZGRD Expr:E1 ZAP NUMCONST:N2 ZATZGRD TACKAZAP {: RESULT=new Statement_numconst(E1, N2); RESULT.setLine(E1left); :}
+			  ;
+			  
+DesignatorStatement ::= (DesignatorStatement_Expr) Designator:D1 JEDN Expr:E2 {: RESULT=new DesignatorStatement_Expr(D1, E2); RESULT.setLine(D1left); :}
+						|
+						(DesignatorArray) Designator:D1 JEDN Designator:D2 AT Designator:D3 {: RESULT=new DesignatorArray(D1, D2, D3); RESULT.setLine(D1left); :} 
+						|
+						(DesignatorTar) Designator:D1 JEDN OTVUGLZGRD Factor:F2 TAR Factor:F3 ZATUGLZGRD {: RESULT=new DesignatorTar(D1, F2, F3); RESULT.setLine(D1left); :}
+						|
+						(DesignatorStatement_Expr_addRight) Designator:D1 AddopRight:A2 Expr:E3 {: RESULT=new DesignatorStatement_Expr_addRight(D1, A2, E3); RESULT.setLine(D1left); :}
+						|
+						(DesignatorStatement_Expr_mulRigth) Designator:D1 MulopRight:M2 Expr:E3 {: RESULT=new DesignatorStatement_Expr_mulRigth(D1, M2, E3); RESULT.setLine(D1left); :}
+						|
+						(DesignatorStatement_Plus) Designator:D1 PLUSPLUS {: RESULT=new DesignatorStatement_Plus(D1); RESULT.setLine(D1left); :}
+						|
+						(DesignatorStatement_Minus) Designator:D1 MINUSMINUS {: RESULT=new DesignatorStatement_Minus(D1); RESULT.setLine(D1left); :}
+						|
+						(AssignopDesignatorStatementError) Designator:D1 JEDN error {: RESULT=new AssignopDesignatorStatementError(D1); RESULT.setLine(D1left); :}
+						|
+						(Modifikacija) Designator:D1 JEDN TAR Expr:E2 {: RESULT=new Modifikacija(D1, E2); RESULT.setLine(D1left); :}
+						|
+						(BoolModifikacija) Designator:D1 JEDN AT Designator:D2 {: RESULT=new BoolModifikacija(D1, D2); RESULT.setLine(D1left); :}
+						;
+						
+DesignatorAssignop ::= (Des_Assignop_ADD) Designator:D1 AddopRight:A2 {: RESULT=new Des_Assignop_ADD(D1, A2); RESULT.setLine(D1left); :}
+						|
+						(Des_Assignop_Mul) Designator:D1 MulopRight:M2 {: RESULT=new Des_Assignop_Mul(D1, M2); RESULT.setLine(D1left); :}
+						;
+						
+Assignop ::= (Assignop_equal) JEDN {: RESULT=new Assignop_equal(); :}
+			|
+			(AddopRight_add_ass) PLUSJEDN {: RESULT=new AddopRight_add_ass(); :}
+			|
+			(AddopRight_sub_ass) MINUSJEDN {: RESULT=new AddopRight_sub_ass(); :}
+			|
+			(MulopRight_mul_ass) PUTAJEDN {: RESULT=new MulopRight_mul_ass(); :}
+			|
+			(MulopRight_div_ass) PODELJENOJEDN {: RESULT=new MulopRight_div_ass(); :}
+			|
+			(MulopRight_proc_ass) POSTOJEDN {: RESULT=new MulopRight_proc_ass(); :}
+			 ;
+			 
+AddopRight ::= (AddopRight_add) PLUSJEDN {: RESULT=new AddopRight_add(); :}
+				|
+				(AddopRight_sub) MINUSJEDN {: RESULT=new AddopRight_sub(); :}
+				;
+				
+MulopRight ::= (MulopRight_mul) PUTAJEDN {: RESULT=new MulopRight_mul(); :}
+				|
+				(MulopRight_div) PODELJENOJEDN {: RESULT=new MulopRight_div(); :}
+				|
+				(MulopRight_proc) POSTOJEDN {: RESULT=new MulopRight_proc(); :}
+				;
+				
+Expr ::= (ExprRight) ExprLeft:E1 AddopRight:A2 Expr:E3 {: RESULT=new ExprRight(E1, A2, E3); RESULT.setLine(E1left); :}
+		|
+		(LeftExpr) ExprLeft:E1 {: RESULT=new LeftExpr(E1); RESULT.setLine(E1left); :}
+		;
+
+ExprLeft ::= (ExprList) ExprLeft:E1 AddopLeft:A2 TermLeft:T3 {: RESULT=new ExprList(E1, A2, T3); RESULT.setLine(E1left); :}
+		|
+		(ExprTerm) Term:T1 {: RESULT=new ExprTerm(T1); RESULT.setLine(T1left); :}
+		|
+		(ExprTermMinus) MINUS Term:T1 {: RESULT=new ExprTermMinus(T1); RESULT.setLine(T1left); :}
+		;
+		
+Term ::= (TermRight_term) TermLeft:T1 MulopRight:M2 Term:T3 {: RESULT=new TermRight_term(T1, M2, T3); RESULT.setLine(T1left); :}
+		|
+		(TermLeft_term) TermLeft:T1 {: RESULT=new TermLeft_term(T1); RESULT.setLine(T1left); :}
+		;
+
+TermLeft ::= (TermFactor) TermLeft:T1 MulopLeft:M2 Factor:F3 {: RESULT=new TermFactor(T1, M2, F3); RESULT.setLine(T1left); :} 
+		 |
+		 (TermOne) Factor:F1 {: RESULT=new TermOne(F1); RESULT.setLine(F1left); :}
+		 ;
+
+Factor ::= (FactorNum) NUMCONST:N1 {: RESULT=new FactorNum(N1); RESULT.setLine(N1left); :} 
+		   |
+		   (FactorChar) CHARCONST:C1 {: RESULT=new FactorChar(C1); RESULT.setLine(C1left); :}
+		   |
+		   (FactorExpr) OTVZGRD Expr:E1 ZATZGRD {: RESULT=new FactorExpr(E1); RESULT.setLine(E1left); :}
+		   |
+		   (FactorBool) BOOLCONST:B1 {: RESULT=new FactorBool(B1); RESULT.setLine(B1left); :}
+		   |
+		   (NewType1) NEW Type:T1 OTVUGLZGRD Expr:E2 ZATUGLZGRD {: RESULT=new NewType1(T1, E2); RESULT.setLine(T1left); :}
+		   |
+		   (NewType0) NEW Type:T1 {: RESULT=new NewType0(T1); RESULT.setLine(T1left); :}
+		   |
+		   (FactorDesignator) Designator:D1 {: RESULT=new FactorDesignator(D1); RESULT.setLine(D1left); :}
+		   |
+		   (FactorDesignatorConst) Designator:D1 OTVZGRD ZATZGRD {: RESULT=new FactorDesignatorConst(D1); RESULT.setLine(D1left); :}
+		   ;
+		   
+
+		   		   
+Designator ::= (DesignatorExpr) ArrayOnly:A1 OTVUGLZGRD Expr:E2 ZATUGLZGRD {: RESULT=new DesignatorExpr(A1, E2); RESULT.setLine(A1left); :}			
+				|
+				(DesignatorIdent) IDENT:IDName {: RESULT=new DesignatorIdent(IDName); RESULT.setLine(IDNameleft); :}
+				;
+				
+ArrayOnly ::= (ArrayOnly) Designator:D1 {: RESULT=new ArrayOnly(D1); RESULT.setLine(D1left); :};
+
+				
+
+Addop ::= (Addop_left) AddopLeft:A1 {: RESULT=new Addop_left(A1); RESULT.setLine(A1left); :}
+			|
+			(Addop_right) AddopRight:A1 {: RESULT=new Addop_right(A1); RESULT.setLine(A1left); :}
+			;
+			
+Mulop ::= (Mulop_left) MulopLeft:M1 {: RESULT=new Mulop_left(M1); RESULT.setLine(M1left); :}
+			|
+			(Mulop_right) MulopRight:M1 {: RESULT=new Mulop_right(M1); RESULT.setLine(M1left); :}
+			;
+
+AddopLeft ::= (Addop_add) PLUS {: RESULT=new Addop_add(); :}
+		 |
+		 (Addop_sub) MINUS {: RESULT=new Addop_sub(); :}
+		 ;
+		 
+MulopLeft ::= (Mulop_mul) PUTA {: RESULT=new Mulop_mul(); :}
+		  |
+		  (Mulop_div) PODELJENO {: RESULT=new Mulop_div(); :}
+		  |
+		  (Mulop_proc) POSTO {: RESULT=new Mulop_proc(); :}
+		  ;
+
+
+
+

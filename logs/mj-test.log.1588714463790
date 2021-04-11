@@ -1,0 +1,138 @@
+INFO  23:23:00,714 - Compiling source file: C:\Users\Djole\Desktop\PP_projekat\workspace\MJCompiler\test\program.mj
+INFO  23:23:00,767 - #6 program
+INFO  23:23:00,767 - #3 MJProgram
+INFO  23:23:00,767 - #3 int
+INFO  23:23:00,769 - #3 x
+INFO  23:23:00,770 - #9 ;
+INFO  23:23:00,772 - #3 int
+INFO  23:23:00,774 - #3 y
+INFO  23:23:00,774 - #9 ;
+INFO  23:23:00,774 - #7 {
+INFO  23:23:00,774 - #15 void
+INFO  23:23:00,775 - #3 main
+INFO  23:23:00,775 - #16 (
+INFO  23:23:00,775 - #17 )
+INFO  23:23:00,776 - #7 {
+INFO  23:23:00,778 - #3 x
+INFO  23:23:00,779 - #10 =
+INFO  23:23:00,779 - #2 5
+INFO  23:23:00,779 - #31 +
+INFO  23:23:00,780 - #3 y
+INFO  23:23:00,782 - #31 +
+INFO  23:23:00,782 - #2 3
+INFO  23:23:00,782 - #9 ;
+INFO  23:23:00,783 - #24 print
+INFO  23:23:00,783 - #16 (
+INFO  23:23:00,783 - #2 1
+INFO  23:23:00,783 - #17 )
+INFO  23:23:00,783 - #9 ;
+INFO  23:23:00,783 - #8 }
+INFO  23:23:00,784 - #8 }
+INFO  23:23:00,798 - Program(
+  ProgName(
+   MJProgram
+  ) [ProgName]
+  GlobalDeclList_NoEps(
+    GlobalDeclList_NoEps(
+      GlobalDeclList_Eps(
+      ) [GlobalDeclList_Eps]
+      GlobalDecl_Var(
+        GlobalVarDecl(
+          Type(
+           int
+          ) [Type]
+          GlobalVarDeclDefineList_Item(
+            GlobalVarDeclDefine(
+              VarDeclDefine_Single(
+               x
+              ) [VarDeclDefine_Single]
+            ) [GlobalVarDeclDefine]
+          ) [GlobalVarDeclDefineList_Item]
+        ) [GlobalVarDecl]
+      ) [GlobalDecl_Var]
+    ) [GlobalDeclList_NoEps]
+    GlobalDecl_Var(
+      GlobalVarDecl(
+        Type(
+         int
+        ) [Type]
+        GlobalVarDeclDefineList_Item(
+          GlobalVarDeclDefine(
+            VarDeclDefine_Single(
+             y
+            ) [VarDeclDefine_Single]
+          ) [GlobalVarDeclDefine]
+        ) [GlobalVarDeclDefineList_Item]
+      ) [GlobalVarDecl]
+    ) [GlobalDecl_Var]
+  ) [GlobalDeclList_NoEps]
+  MethodDeclList_NoEps(
+    MethodDeclList_Eps(
+    ) [MethodDeclList_Eps]
+    MethodDecl(
+      VoidType_Void(
+       main
+      ) [VoidType_Void]
+      MethodSignatureDerived1(
+        OptFormPars_Eps(
+        ) [OptFormPars_Eps]
+      ) [MethodSignatureDerived1]
+      VarDeclList_Eps(
+      ) [VarDeclList_Eps]
+      StatementList_NoEps(
+        StatementList_NoEps(
+          StatmentList_Eps(
+          ) [StatmentList_Eps]
+          StatementDesignator_Single(
+            DesignatorStatement_Expr(
+              DesignatorIdent(
+               x
+              ) [DesignatorIdent]
+              ExprList(
+                ExprList(
+                  ExprTerm(
+                    TermOne(
+                      FactorNum(
+                       5
+                      ) [FactorNum]
+                    ) [TermOne]
+                  ) [ExprTerm]
+                  Addop_add(
+                  ) [Addop_add]
+                  TermOne(
+                    FactorDesignator(
+                      DesignatorIdent(
+                       y
+                      ) [DesignatorIdent]
+                    ) [FactorDesignator]
+                  ) [TermOne]
+                ) [ExprList]
+                Addop_add(
+                ) [Addop_add]
+                TermOne(
+                  FactorNum(
+                   3
+                  ) [FactorNum]
+                ) [TermOne]
+              ) [ExprList]
+            ) [DesignatorStatement_Expr]
+          ) [StatementDesignator_Single]
+        ) [StatementList_NoEps]
+        Statement_print(
+          ExprTerm(
+            TermOne(
+              FactorNum(
+               1
+              ) [FactorNum]
+            ) [TermOne]
+          ) [ExprTerm]
+        ) [Statement_print]
+      ) [StatementList_NoEps]
+    ) [MethodDecl]
+  ) [MethodDeclList_NoEps]
+) [Program]
+INFO  23:23:00,798 - ===================================
+ERROR 23:23:00,801 - Greska na liniji rs.etf.pp1.symboltable.concepts.Struct@6f539caf :  nekompatibilni tipovi u dodeli vrednosti null da da 
+INFO  23:23:00,801 -  Print count calls = 1
+INFO  23:23:00,801 -  Deklarisanih promenljivih ima = 0
+INFO  23:23:00,801 - ====================================

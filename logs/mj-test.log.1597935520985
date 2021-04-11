@@ -1,0 +1,17 @@
+INFO  16:58:11,471 - Compiling source file: C:\Users\Djole\Desktop\PP_projekat\workspace\MJCompiler\test\program.mj
+INFO  16:58:11,578 - #6 program
+INFO  16:58:11,578 - #3 test_303
+INFO  16:58:11,579 - #29 const
+INFO  16:58:11,581 - #3 int
+INFO  16:58:11,581 - #3 cinilac
+INFO  16:58:11,583 - #10 =
+INFO  16:58:11,583 - #2 4
+INFO  16:58:11,583 - #18 ,
+INFO  16:58:11,585 - #3 delilac
+INFO  16:58:11,585 - #10 =
+INFO  16:58:11,585 - #2 3
+INFO  16:58:11,585 - #9 ;
+INFO  16:58:11,586 - #41 abstract
+ERROR 16:58:11,586 - 
+Sintaksna greska na liniji 6
+ERROR 16:58:11,586 - Fatalna greska, parsiranje se ne moze nastaviti na liniji 6

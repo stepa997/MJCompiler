@@ -1,0 +1,130 @@
+INFO  16:00:16,462 - Compiling source file: C:\Users\Djole\Desktop\PP_projekat\workspace\MJCompiler\test\program.mj
+INFO  16:00:16,698 - #6 program
+INFO  16:00:16,698 - #3 test301
+INFO  16:00:16,698 - #3 int
+INFO  16:00:16,703 - #3 niz
+INFO  16:00:16,705 - #11 [
+INFO  16:00:16,705 - #14 ]
+INFO  16:00:16,705 - #9 ;
+INFO  16:00:16,708 - #7 {
+INFO  16:00:16,710 - #15 void
+INFO  16:00:16,712 - #3 main
+INFO  16:00:16,712 - #16 (
+INFO  16:00:16,712 - #17 )
+INFO  16:00:16,714 - #7 {
+INFO  16:00:16,715 - #3 niz
+INFO  16:00:16,716 - #10 =
+INFO  16:00:16,717 - #28 new
+INFO  16:00:16,718 - #3 int
+INFO  16:00:16,718 - #11 [
+INFO  16:00:16,718 - #2 3
+INFO  16:00:16,718 - #14 ]
+INFO  16:00:16,719 - #9 ;
+INFO  16:00:16,719 - #3 niz
+INFO  16:00:16,720 - #11 [
+INFO  16:00:16,720 - #2 1
+INFO  16:00:16,720 - #14 ]
+INFO  16:00:16,720 - #10 =
+INFO  16:00:16,721 - #2 2
+INFO  16:00:16,721 - #9 ;
+INFO  16:00:16,721 - #8 }
+INFO  16:00:16,721 - #8 }
+INFO  16:00:16,737 - Program(
+  ProgName(
+   test301
+  ) [ProgName]
+  GlobalDeclList_NoEps(
+    GlobalDeclList_Eps(
+    ) [GlobalDeclList_Eps]
+    GlobalDecl_Var(
+      GlobalVarDecl(
+        Type(
+         int
+        ) [Type]
+        GlobalVarDeclDefineList_Item(
+          GlobalVarDeclDefine(
+            VarDeclDefine_Array(
+             niz
+            ) [VarDeclDefine_Array]
+          ) [GlobalVarDeclDefine]
+        ) [GlobalVarDeclDefineList_Item]
+      ) [GlobalVarDecl]
+    ) [GlobalDecl_Var]
+  ) [GlobalDeclList_NoEps]
+  MethodDeclList_NoEps(
+    MethodDeclList_Eps(
+    ) [MethodDeclList_Eps]
+    MethodDecl(
+      VoidType_Void(
+       main
+      ) [VoidType_Void]
+      MethodSignatureDerived1(
+        OptFormPars_Eps(
+        ) [OptFormPars_Eps]
+      ) [MethodSignatureDerived1]
+      VarDeclList_Eps(
+      ) [VarDeclList_Eps]
+      StatementList_NoEps(
+        StatementList_NoEps(
+          StatmentList_Eps(
+          ) [StatmentList_Eps]
+          StatementDesignator_Single(
+            DesignatorStatement_Expr(
+              DesignatorIdent(
+               niz
+              ) [DesignatorIdent]
+              Assignop_equal(
+              ) [Assignop_equal]
+              ExprTerm(
+                TermOne(
+                  NewType1(
+                    Type(
+                     int
+                    ) [Type]
+                    ExprTerm(
+                      TermOne(
+                        FactorNum(
+                         3
+                        ) [FactorNum]
+                      ) [TermOne]
+                    ) [ExprTerm]
+                  ) [NewType1]
+                ) [TermOne]
+              ) [ExprTerm]
+            ) [DesignatorStatement_Expr]
+          ) [StatementDesignator_Single]
+        ) [StatementList_NoEps]
+        StatementDesignator_Single(
+          DesignatorStatement_Expr(
+            DesignatorExpr(
+              DesignatorIdent(
+               niz
+              ) [DesignatorIdent]
+              ExprTerm(
+                TermOne(
+                  FactorNum(
+                   1
+                  ) [FactorNum]
+                ) [TermOne]
+              ) [ExprTerm]
+            ) [DesignatorExpr]
+            Assignop_equal(
+            ) [Assignop_equal]
+            ExprTerm(
+              TermOne(
+                FactorNum(
+                 2
+                ) [FactorNum]
+              ) [TermOne]
+            ) [ExprTerm]
+          ) [DesignatorStatement_Expr]
+        ) [StatementDesignator_Single]
+      ) [StatementList_NoEps]
+    ) [MethodDecl]
+  ) [MethodDeclList_NoEps]
+) [Program]
+INFO  16:00:16,738 - ===================================
+INFO  16:00:16,742 - Detektovan pristup elementu niza : Var niz: Arr of int, 0, 0  na liniji 13
+INFO  16:00:16,742 -  Print count calls = 0
+INFO  16:00:16,742 -  Deklarisanih promenljivih ima = 0
+INFO  16:00:16,743 - ====================================

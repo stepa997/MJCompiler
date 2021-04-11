@@ -1,0 +1,163 @@
+INFO  13:02:36,225 - Compiling source file: C:\Users\Djole\Desktop\PP_projekat\workspace\MJCompiler\test\program.mj
+INFO  13:02:36,288 - #6 program
+INFO  13:02:36,288 - #3 test301
+INFO  13:02:36,288 - #3 char
+INFO  13:02:36,290 - #3 nizch
+INFO  13:02:36,291 - #11 [
+INFO  13:02:36,291 - #14 ]
+INFO  13:02:36,291 - #9 ;
+INFO  13:02:36,292 - #7 {
+INFO  13:02:36,293 - #15 void
+INFO  13:02:36,294 - #3 main
+INFO  13:02:36,294 - #16 (
+INFO  13:02:36,294 - #17 )
+INFO  13:02:36,295 - #3 boolean
+INFO  13:02:36,296 - #3 i
+INFO  13:02:36,296 - #11 [
+INFO  13:02:36,296 - #14 ]
+INFO  13:02:36,296 - #9 ;
+INFO  13:02:36,296 - #7 {
+INFO  13:02:36,297 - #3 i
+INFO  13:02:36,298 - #10 =
+INFO  13:02:36,298 - #28 new
+INFO  13:02:36,298 - #3 boolean
+INFO  13:02:36,299 - #11 [
+INFO  13:02:36,299 - #2 8
+INFO  13:02:36,300 - #14 ]
+INFO  13:02:36,300 - #9 ;
+INFO  13:02:36,301 - #3 i
+INFO  13:02:36,301 - #11 [
+INFO  13:02:36,302 - #2 0
+INFO  13:02:36,302 - #14 ]
+INFO  13:02:36,302 - #10 =
+INFO  13:02:36,302 - #2 0
+INFO  13:02:36,302 - #9 ;
+INFO  13:02:36,302 - #8 }
+INFO  13:02:36,302 - #8 }
+INFO  13:02:36,309 - Program(
+  ProgName(
+   test301
+  ) [ProgName]
+  GlobalDeclList_NoEps(
+    GlobalDeclList_Eps(
+    ) [GlobalDeclList_Eps]
+    GlobalDecl_Var(
+      GlobalVarDecl(
+        Type(
+         char
+        ) [Type]
+        GlobalVarDeclDefineList_Item(
+          GlobalVarDeclDefine(
+            VarDeclDefine_Array(
+             nizch
+            ) [VarDeclDefine_Array]
+          ) [GlobalVarDeclDefine]
+        ) [GlobalVarDeclDefineList_Item]
+      ) [GlobalVarDecl]
+    ) [GlobalDecl_Var]
+  ) [GlobalDeclList_NoEps]
+  MethodDeclList_NoEps(
+    MethodDeclList_Eps(
+    ) [MethodDeclList_Eps]
+    MethodDecl(
+      VoidType_Void(
+       main
+      ) [VoidType_Void]
+      MethodSignatureDerived1(
+        OptFormPars_Eps(
+        ) [OptFormPars_Eps]
+      ) [MethodSignatureDerived1]
+      VarDeclList_NoEps(
+        VarDeclList_Eps(
+        ) [VarDeclList_Eps]
+        VarDecl(
+          Type(
+           boolean
+          ) [Type]
+          VarDeclDefine_Item(
+            VarDeclDefine_Array(
+             i
+            ) [VarDeclDefine_Array]
+          ) [VarDeclDefine_Item]
+        ) [VarDecl]
+      ) [VarDeclList_NoEps]
+      StatementList_NoEps(
+        StatementList_NoEps(
+          StatmentList_Eps(
+          ) [StatmentList_Eps]
+          StatementDesignator_Single(
+            DesignatorStatement_Expr(
+              DesignatorIdent(
+               i
+              ) [DesignatorIdent]
+              LeftExpr(
+                ExprTerm(
+                  TermLeft_term(
+                    TermOne(
+                      NewType1(
+                        Type(
+                         boolean
+                        ) [Type]
+                        LeftExpr(
+                          ExprTerm(
+                            TermLeft_term(
+                              TermOne(
+                                FactorNum(
+                                 8
+                                ) [FactorNum]
+                              ) [TermOne]
+                            ) [TermLeft_term]
+                          ) [ExprTerm]
+                        ) [LeftExpr]
+                      ) [NewType1]
+                    ) [TermOne]
+                  ) [TermLeft_term]
+                ) [ExprTerm]
+              ) [LeftExpr]
+            ) [DesignatorStatement_Expr]
+          ) [StatementDesignator_Single]
+        ) [StatementList_NoEps]
+        StatementDesignator_Single(
+          DesignatorStatement_Expr(
+            DesignatorExpr(
+              ArrayOnly(
+                DesignatorIdent(
+                 i
+                ) [DesignatorIdent]
+              ) [ArrayOnly]
+              LeftExpr(
+                ExprTerm(
+                  TermLeft_term(
+                    TermOne(
+                      FactorNum(
+                       0
+                      ) [FactorNum]
+                    ) [TermOne]
+                  ) [TermLeft_term]
+                ) [ExprTerm]
+              ) [LeftExpr]
+            ) [DesignatorExpr]
+            LeftExpr(
+              ExprTerm(
+                TermLeft_term(
+                  TermOne(
+                    FactorNum(
+                     0
+                    ) [FactorNum]
+                  ) [TermOne]
+                ) [TermLeft_term]
+              ) [ExprTerm]
+            ) [LeftExpr]
+          ) [DesignatorStatement_Expr]
+        ) [StatementDesignator_Single]
+      ) [StatementList_NoEps]
+    ) [MethodDecl]
+  ) [MethodDeclList_NoEps]
+) [Program]
+INFO  13:02:36,309 - ===================================
+ERROR 13:02:36,313 - Nije pronadjen tip boolean u tabeli simbola
+ERROR 13:02:36,313 - Nije pronadjen tip boolean u tabeli simbola
+INFO  13:02:36,314 - Detektovan pristup elementu niza : Var i: Arr of notype, 0, 1  na liniji 14
+INFO  13:02:36,314 -  Print count calls = 0
+INFO  13:02:36,314 -  Deklarisanih promenljivih ima = 0
+INFO  13:02:36,314 - ====================================

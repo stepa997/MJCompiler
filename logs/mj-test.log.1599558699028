@@ -1,0 +1,157 @@
+INFO  11:42:36,826 - Compiling source file: C:\Users\Djole\Desktop\PP_projekat\workspace\MJCompiler\test\program.mj
+INFO  11:42:37,075 - #6 program
+INFO  11:42:37,075 - #3 test301
+INFO  11:42:37,075 - #3 char
+INFO  11:42:37,077 - #3 nizch
+INFO  11:42:37,077 - #11 [
+INFO  11:42:37,078 - #14 ]
+INFO  11:42:37,078 - #9 ;
+INFO  11:42:37,079 - #7 {
+INFO  11:42:37,080 - #15 void
+INFO  11:42:37,081 - #3 main
+INFO  11:42:37,081 - #16 (
+INFO  11:42:37,081 - #17 )
+INFO  11:42:37,082 - #3 int
+INFO  11:42:37,082 - #3 i
+INFO  11:42:37,083 - #9 ;
+INFO  11:42:37,083 - #7 {
+INFO  11:42:37,084 - #3 i
+INFO  11:42:37,085 - #10 =
+INFO  11:42:37,085 - #2 1296124481
+INFO  11:42:37,085 - #9 ;
+INFO  11:42:37,086 - #3 nizch
+INFO  11:42:37,087 - #10 =
+INFO  11:42:37,087 - #52 #
+INFO  11:42:37,087 - #3 i
+INFO  11:42:37,087 - #9 ;
+INFO  11:42:37,087 - #24 print
+INFO  11:42:37,087 - #16 (
+INFO  11:42:37,087 - #3 nizch
+INFO  11:42:37,087 - #11 [
+INFO  11:42:37,088 - #2 0
+INFO  11:42:37,088 - #14 ]
+INFO  11:42:37,088 - #17 )
+INFO  11:42:37,089 - #9 ;
+INFO  11:42:37,089 - #8 }
+INFO  11:42:37,089 - #8 }
+INFO  11:42:37,097 - Program(
+  ProgName(
+   test301
+  ) [ProgName]
+  GlobalDeclList_NoEps(
+    GlobalDeclList_Eps(
+    ) [GlobalDeclList_Eps]
+    GlobalDecl_Var(
+      GlobalVarDecl(
+        Type(
+         char
+        ) [Type]
+        GlobalVarDeclDefineList_Item(
+          GlobalVarDeclDefine(
+            VarDeclDefine_Array(
+             nizch
+            ) [VarDeclDefine_Array]
+          ) [GlobalVarDeclDefine]
+        ) [GlobalVarDeclDefineList_Item]
+      ) [GlobalVarDecl]
+    ) [GlobalDecl_Var]
+  ) [GlobalDeclList_NoEps]
+  MethodDeclList_NoEps(
+    MethodDeclList_Eps(
+    ) [MethodDeclList_Eps]
+    MethodDecl(
+      VoidType_Void(
+       main
+      ) [VoidType_Void]
+      MethodSignatureDerived1(
+        OptFormPars_Eps(
+        ) [OptFormPars_Eps]
+      ) [MethodSignatureDerived1]
+      VarDeclList_NoEps(
+        VarDeclList_Eps(
+        ) [VarDeclList_Eps]
+        VarDecl(
+          Type(
+           int
+          ) [Type]
+          VarDeclDefine_Item(
+            VarDeclDefine_Single(
+             i
+            ) [VarDeclDefine_Single]
+          ) [VarDeclDefine_Item]
+        ) [VarDecl]
+      ) [VarDeclList_NoEps]
+      StatementList_NoEps(
+        StatementList_NoEps(
+          StatementList_NoEps(
+            StatmentList_Eps(
+            ) [StatmentList_Eps]
+            StatementDesignator_Single(
+              DesignatorStatement_Expr(
+                DesignatorIdent(
+                 i
+                ) [DesignatorIdent]
+                LeftExpr(
+                  ExprTerm(
+                    TermLeft_term(
+                      TermOne(
+                        FactorNum(
+                         1296124481
+                        ) [FactorNum]
+                      ) [TermOne]
+                    ) [TermLeft_term]
+                  ) [ExprTerm]
+                ) [LeftExpr]
+              ) [DesignatorStatement_Expr]
+            ) [StatementDesignator_Single]
+          ) [StatementList_NoEps]
+          StatementDesignator_Single(
+            Modifikacija(
+              DesignatorIdent(
+               nizch
+              ) [DesignatorIdent]
+              DesignatorIdent(
+               i
+              ) [DesignatorIdent]
+            ) [Modifikacija]
+          ) [StatementDesignator_Single]
+        ) [StatementList_NoEps]
+        Statement_print(
+          LeftExpr(
+            ExprTerm(
+              TermLeft_term(
+                TermOne(
+                  FactorDesignator(
+                    DesignatorExpr(
+                      ArrayOnly(
+                        DesignatorIdent(
+                         nizch
+                        ) [DesignatorIdent]
+                      ) [ArrayOnly]
+                      LeftExpr(
+                        ExprTerm(
+                          TermLeft_term(
+                            TermOne(
+                              FactorNum(
+                               0
+                              ) [FactorNum]
+                            ) [TermOne]
+                          ) [TermLeft_term]
+                        ) [ExprTerm]
+                      ) [LeftExpr]
+                    ) [DesignatorExpr]
+                  ) [FactorDesignator]
+                ) [TermOne]
+              ) [TermLeft_term]
+            ) [ExprTerm]
+          ) [LeftExpr]
+        ) [Statement_print]
+      ) [StatementList_NoEps]
+    ) [MethodDecl]
+  ) [MethodDeclList_NoEps]
+) [Program]
+INFO  11:42:37,097 - ===================================
+INFO  11:42:37,101 - Detektovan pristup elementu niza : Var nizch: Arr of char, 0, 0  na liniji 14
+INFO  11:42:37,102 -  Print count calls = 1
+INFO  11:42:37,102 -  Deklarisanih promenljivih ima = 0
+INFO  11:42:37,102 - ====================================

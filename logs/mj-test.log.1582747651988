@@ -1,0 +1,20 @@
+INFO  21:07:17,454 - Compiling source file: C:\Users\Djole\Desktop\PP_projekat\workspace\MJCompiler\test\program.mj
+INFO  21:07:17,459 - #6 program
+INFO  21:07:17,459 - #3 MJProgram
+INFO  21:07:17,459 - #3 int
+INFO  21:07:17,459 - #3 x
+INFO  21:07:17,459 - #18 ,
+INFO  21:07:17,459 - #3 y
+INFO  21:07:17,459 - #9 ;
+INFO  21:07:17,459 - #7 {
+INFO  21:07:17,459 - #15 void
+INFO  21:07:17,459 - #3 main
+INFO  21:07:17,459 - #16 (
+INFO  21:07:17,460 - #17 )
+INFO  21:07:17,460 - #7 {
+INFO  21:07:17,460 - #3 x
+INFO  21:07:17,460 - #10 =
+INFO  21:07:17,460 - #2 1
+INFO  21:07:17,460 - #9 ;
+INFO  21:07:17,460 - #8 }
+INFO  21:07:17,460 - #8 }

@@ -1,0 +1,83 @@
+INFO  21:07:31,993 - Compiling source file: C:\Users\Djole\Desktop\PP_projekat\workspace\MJCompiler\test\program.mj
+INFO  21:07:32,076 - #6 program
+INFO  21:07:32,076 - #3 MJProgram
+INFO  21:07:32,076 - #3 int
+INFO  21:07:32,078 - #3 x
+INFO  21:07:32,078 - #18 ,
+INFO  21:07:32,080 - #3 y
+INFO  21:07:32,080 - #9 ;
+INFO  21:07:32,080 - #7 {
+INFO  21:07:32,082 - #15 void
+INFO  21:07:32,083 - #3 main
+INFO  21:07:32,084 - #16 (
+INFO  21:07:32,084 - #17 )
+INFO  21:07:32,086 - #7 {
+INFO  21:07:32,088 - #3 x
+INFO  21:07:32,089 - #10 =
+INFO  21:07:32,089 - #2 1
+INFO  21:07:32,089 - #9 ;
+INFO  21:07:32,090 - #8 }
+INFO  21:07:32,090 - #8 }
+INFO  21:07:32,204 - Program(
+ MJProgram
+  GlobalDeclList_NoEps(
+    GlobalDeclList_Eps(
+    ) [GlobalDeclList_Eps]
+    GlobalDecl_Var(
+      GlobalVarDecl(
+        Type(
+         int
+        ) [Type]
+        GlobalVarDeclDefineList_List(
+          GlobalVarDeclDefineList_Item(
+            GlobalVarDeclDefine(
+              VarDeclDefine_Single(
+               x
+              ) [VarDeclDefine_Single]
+            ) [GlobalVarDeclDefine]
+          ) [GlobalVarDeclDefineList_Item]
+          GlobalVarDeclDefine(
+            VarDeclDefine_Single(
+             y
+            ) [VarDeclDefine_Single]
+          ) [GlobalVarDeclDefine]
+        ) [GlobalVarDeclDefineList_List]
+      ) [GlobalVarDecl]
+    ) [GlobalDecl_Var]
+  ) [GlobalDeclList_NoEps]
+  MethodDeclList_NoEps(
+    MethodDeclList_Eps(
+    ) [MethodDeclList_Eps]
+    MethodDecl(
+      VoidType_Void(
+      ) [VoidType_Void]
+     main
+      MethodSignatureDerived1(
+        OptFormPars_Eps(
+        ) [OptFormPars_Eps]
+      ) [MethodSignatureDerived1]
+      VarDeclList_Eps(
+      ) [VarDeclList_Eps]
+      StatementList_NoEps(
+        StatmentList_Eps(
+        ) [StatmentList_Eps]
+        StatementDesignator_Single(
+          DesignatorStatement_Expr(
+            DesignatorDes(
+             x
+            ) [DesignatorDes]
+            ExprTerm(
+              TermOne(
+                FactorNum(
+                 1
+                ) [FactorNum]
+              ) [TermOne]
+            ) [ExprTerm]
+          ) [DesignatorStatement_Expr]
+        ) [StatementDesignator_Single]
+      ) [StatementList_NoEps]
+    ) [MethodDecl]
+  ) [MethodDeclList_NoEps]
+) [Program]
+INFO  21:07:32,205 - ===================================
+INFO  21:07:32,243 -  Print count calls = 0

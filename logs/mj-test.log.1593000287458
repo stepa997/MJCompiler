@@ -1,0 +1,95 @@
+INFO  14:03:27,574 - Compiling source file: C:\Users\Djole\Desktop\PP_projekat\workspace\MJCompiler\test\program.mj
+INFO  14:03:27,633 - #6 program
+INFO  14:03:27,634 - #3 test301
+INFO  14:03:27,634 - #7 {
+INFO  14:03:27,636 - #15 void
+INFO  14:03:27,636 - #3 main
+INFO  14:03:27,636 - #16 (
+INFO  14:03:27,636 - #17 )
+INFO  14:03:27,637 - #3 char
+INFO  14:03:27,638 - #3 x
+INFO  14:03:27,639 - #9 ;
+INFO  14:03:27,639 - #7 {
+INFO  14:03:27,640 - #3 x
+INFO  14:03:27,640 - #10 =
+INFO  14:03:27,641 - #11 [
+INFO  14:03:27,641 - #4 A
+INFO  14:03:27,641 - #52 #
+INFO  14:03:27,641 - #2 2
+ERROR 14:03:27,641 - 
+Sintaksna greska na liniji 10
+INFO  14:03:27,641 - #14 ]
+INFO  14:03:27,641 - #9 ;
+INFO  14:03:27,641 - #24 print
+INFO  14:03:27,642 - #16 (
+INFO  14:03:27,642 - #3 x
+INFO  14:03:27,643 - #17 )
+INFO  14:03:27,644 - #9 ;
+INFO  14:03:27,644 - #8 }
+INFO  14:03:27,644 - #8 }
+INFO  14:03:27,650 - Program(
+  ProgName(
+   test301
+  ) [ProgName]
+  GlobalDeclList_Eps(
+  ) [GlobalDeclList_Eps]
+  MethodDeclList_NoEps(
+    MethodDeclList_Eps(
+    ) [MethodDeclList_Eps]
+    MethodDecl(
+      VoidType_Void(
+       main
+      ) [VoidType_Void]
+      MethodSignatureDerived1(
+        OptFormPars_Eps(
+        ) [OptFormPars_Eps]
+      ) [MethodSignatureDerived1]
+      VarDeclList_NoEps(
+        VarDeclList_Eps(
+        ) [VarDeclList_Eps]
+        VarDecl(
+          Type(
+           char
+          ) [Type]
+          VarDeclDefine_Item(
+            VarDeclDefine_Single(
+             x
+            ) [VarDeclDefine_Single]
+          ) [VarDeclDefine_Item]
+        ) [VarDecl]
+      ) [VarDeclList_NoEps]
+      StatementList_NoEps(
+        StatementList_NoEps(
+          StatmentList_Eps(
+          ) [StatmentList_Eps]
+          StatementDesignator_Single(
+            AssignopDesignatorStatementError(
+              DesignatorIdent(
+               x
+              ) [DesignatorIdent]
+            ) [AssignopDesignatorStatementError]
+          ) [StatementDesignator_Single]
+        ) [StatementList_NoEps]
+        Statement_print(
+          LeftExpr(
+            ExprTerm(
+              TermLeft_term(
+                TermOne(
+                  FactorDesignator(
+                    DesignatorIdent(
+                     x
+                    ) [DesignatorIdent]
+                  ) [FactorDesignator]
+                ) [TermOne]
+              ) [TermLeft_term]
+            ) [ExprTerm]
+          ) [LeftExpr]
+        ) [Statement_print]
+      ) [StatementList_NoEps]
+    ) [MethodDecl]
+  ) [MethodDeclList_NoEps]
+) [Program]
+INFO  14:03:27,651 - ===================================
+INFO  14:03:27,654 -  Print count calls = 1
+INFO  14:03:27,654 -  Deklarisanih promenljivih ima = 0
+INFO  14:03:27,654 - ====================================

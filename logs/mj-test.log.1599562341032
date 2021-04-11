@@ -1,0 +1,123 @@
+INFO  12:50:30,847 - Compiling source file: C:\Users\Djole\Desktop\PP_projekat\workspace\MJCompiler\test\program.mj
+INFO  12:50:30,958 - #6 program
+INFO  12:50:30,958 - #3 test301
+INFO  12:50:30,958 - #3 char
+INFO  12:50:30,961 - #3 nizch
+INFO  12:50:30,963 - #11 [
+INFO  12:50:30,963 - #14 ]
+INFO  12:50:30,964 - #9 ;
+INFO  12:50:30,965 - #7 {
+INFO  12:50:30,967 - #15 void
+INFO  12:50:30,969 - #3 main
+INFO  12:50:30,969 - #16 (
+INFO  12:50:30,969 - #17 )
+INFO  12:50:30,971 - #3 boolean
+INFO  12:50:30,972 - #3 i
+INFO  12:50:30,972 - #9 ;
+INFO  12:50:30,973 - #7 {
+INFO  12:50:30,975 - #3 i
+INFO  12:50:30,976 - #10 =
+INFO  12:50:30,976 - #5 true
+INFO  12:50:30,976 - #9 ;
+INFO  12:50:30,978 - #24 print
+INFO  12:50:30,979 - #16 (
+INFO  12:50:30,979 - #3 i
+INFO  12:50:30,979 - #17 )
+INFO  12:50:30,980 - #9 ;
+INFO  12:50:30,980 - #8 }
+INFO  12:50:30,980 - #8 }
+INFO  12:50:30,993 - Program(
+  ProgName(
+   test301
+  ) [ProgName]
+  GlobalDeclList_NoEps(
+    GlobalDeclList_Eps(
+    ) [GlobalDeclList_Eps]
+    GlobalDecl_Var(
+      GlobalVarDecl(
+        Type(
+         char
+        ) [Type]
+        GlobalVarDeclDefineList_Item(
+          GlobalVarDeclDefine(
+            VarDeclDefine_Array(
+             nizch
+            ) [VarDeclDefine_Array]
+          ) [GlobalVarDeclDefine]
+        ) [GlobalVarDeclDefineList_Item]
+      ) [GlobalVarDecl]
+    ) [GlobalDecl_Var]
+  ) [GlobalDeclList_NoEps]
+  MethodDeclList_NoEps(
+    MethodDeclList_Eps(
+    ) [MethodDeclList_Eps]
+    MethodDecl(
+      VoidType_Void(
+       main
+      ) [VoidType_Void]
+      MethodSignatureDerived1(
+        OptFormPars_Eps(
+        ) [OptFormPars_Eps]
+      ) [MethodSignatureDerived1]
+      VarDeclList_NoEps(
+        VarDeclList_Eps(
+        ) [VarDeclList_Eps]
+        VarDecl(
+          Type(
+           boolean
+          ) [Type]
+          VarDeclDefine_Item(
+            VarDeclDefine_Single(
+             i
+            ) [VarDeclDefine_Single]
+          ) [VarDeclDefine_Item]
+        ) [VarDecl]
+      ) [VarDeclList_NoEps]
+      StatementList_NoEps(
+        StatementList_NoEps(
+          StatmentList_Eps(
+          ) [StatmentList_Eps]
+          StatementDesignator_Single(
+            DesignatorStatement_Expr(
+              DesignatorIdent(
+               i
+              ) [DesignatorIdent]
+              LeftExpr(
+                ExprTerm(
+                  TermLeft_term(
+                    TermOne(
+                      FactorBool(
+                       true
+                      ) [FactorBool]
+                    ) [TermOne]
+                  ) [TermLeft_term]
+                ) [ExprTerm]
+              ) [LeftExpr]
+            ) [DesignatorStatement_Expr]
+          ) [StatementDesignator_Single]
+        ) [StatementList_NoEps]
+        Statement_print(
+          LeftExpr(
+            ExprTerm(
+              TermLeft_term(
+                TermOne(
+                  FactorDesignator(
+                    DesignatorIdent(
+                     i
+                    ) [DesignatorIdent]
+                  ) [FactorDesignator]
+                ) [TermOne]
+              ) [TermLeft_term]
+            ) [ExprTerm]
+          ) [LeftExpr]
+        ) [Statement_print]
+      ) [StatementList_NoEps]
+    ) [MethodDecl]
+  ) [MethodDeclList_NoEps]
+) [Program]
+INFO  12:50:30,994 - ===================================
+ERROR 12:50:30,999 - Nije pronadjen tip boolean u tabeli simbola
+ERROR 12:50:31,000 - Greska na liniji 14 :  los tip varijable 
+INFO  12:50:31,001 -  Print count calls = 1
+INFO  12:50:31,001 -  Deklarisanih promenljivih ima = 0
+INFO  12:50:31,001 - ====================================
